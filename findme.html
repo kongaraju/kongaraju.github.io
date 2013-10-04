@@ -1,58 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
+	<head>
+		<meta charset="utf-8" />
 
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
-       Remove this if you use the .htaccess -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-  <title>K Raju:findme</title>
-  <meta name="description" content="" />
-  <meta name="author" content="Rajukonga" />
+		<title>K Raju: Find me</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Rajukonga" />
 
-  <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
 
-  <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="stylesheet" href="css/style.css">
-</head>
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="stylesheet" href="css/font.css" />
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			.find_link {
+				text-decoration: none;
+				color: #FFFFFF;
+				font-size: 45px;
+				line-height: 45px;
+			}
+			a:visited {
+				color: #FFFFFF;
+			}
+			.findIcon {
+				/*border: 1px solid #FFFFFF;
+				 border-radius: 50%;
+				 padding:5px;
+				 height:50px;
+				 width:50px;
+				 */
+			}
+			.find_link {
+				display: inline-block;
+				font-size: 60px;
+				cursor: pointer;
+				margin: 15px 10px;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				text-align: center;
+				position: relative;
+				z-index: 1;
+				color: #FFF;
+				/*box-shadow: 0 0 0 3px #FFF;*/
+				-webkit-transition: color 0.3s;
+				-moz-transition: color 0.3s;
+				transition: color 0.3s;
+			}
+		</style>
+	</head>
 
-<body>
-  <div id="container">
-    <header>
-<ul class="menu">
-	<li class="menuItem"><a href="index.html">Home</a></li>
-	<li class="menuItem"><a href="http://kongaraju.blogspot.com" target="_blank">Blog</a></li>
-	<li class="menuItem"><a href="portfolio.html">Portfolio</a></li>
-	<li class="menuItem"><a href="Experiments.html">Codes</a></li>
-	<li class="menuItem"><a href="presantations.html">Slides</a></li>
-	<li class="menuItem"><a href="#">Find me</a></li>
-</ul>
-<hr />
-    </header>
-    <div id="main" role="main" class="pink">
-    	
-    	<div class="findList">
-    		<div class="findItem">
-    			<ul><li class="findPlus"><a href="">
-    				
-    				<img src="img/googleplus.png" alt="Google Plus" />
-    				
-    			</a></li>
-    				<li class="findFB"><a href=""> <img src="img/facebook.png" alt="Facebook" /></a></li>
-    				<li class="findTweet"><a href=""><img src="img/twitter.png" alt="twitter" /></a></li>
-    				<li class="findGit"><a href=""> <img src="img/github.png" alt="github" /></a></li>
-    				<li class="findLin"><a href=""> <img src="img/linkedin.png" alt="LinkedIn" /></a></li>
-    			</ul>
-    		</div>
-    		
-    	</div>
-    </div>
-    <footer>
+	<body>
+		<div id="container">
+			<header>
+				<ul class="menu">
+					<li class="menuItem">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="menuItem">
+						<a href="http://kongaraju.blogspot.com" target="_blank">Blog</a>
+					</li>
+					<li class="menuItem">
+						<a href="portfolio.html">Portfolio</a>
+					</li>
+					<li class="menuItem">
+						<a href="Experiments.html">Codes</a>
+					</li>
+					<li class="menuItem">
+						<a href="presantations.html">Slides</a>
+					</li>
+					<li class="menuItem">
+						<a href="#">Find me</a>
+					</li>
+				</ul>
+				<hr />
+			</header>
+			<div id="main" role="main" class="pink">
 
-    </footer>
-  </div> <!--! end of #container -->
-</body>
+				<div class="findList">
+					<div class="findItem">
+						<ul>
+							<li class="findPlus findIcon ">
+								<a href="" class="find_link icon-google-plus-2"> <!--		<img src="img/googleplus.png" alt="Google Plus" />--> </a>
+							</li>
+
+							<li class="findFB findIcon">
+								<a href="" class="find_link icon-facebook-3"> <!--<img src="img/facebook.png" alt="Facebook" />
+								--> </a>
+							</li>
+							<li class="findTweet findIcon">
+								<a href="" class="find_link icon-twitter-2"> <!--<img src="img/twitter.png" alt="twitter" />
+								--> </a>
+							</li>
+							<li class="findGit findIcon">
+								<a href="" class="find_link icon-github-2"> <!-- <img src="img/github.png" alt="github" /> --> </a>
+							</li>
+							<li class="findLin findIcon">
+								<a href="" class="find_link icon-linkedin"> <!-- <img src="img/linkedin.png" alt="LinkedIn" /> --> </a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<footer>
+
+			</footer>
+		</div>
+		<!--! end of #container -->
+	</body>
 </html>

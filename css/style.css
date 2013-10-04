@@ -268,18 +268,19 @@ td { vertical-align: top; }
 
 
 #main{
-	padding:0px 50px;
+	padding:0px 50px 50px;
 	position: absolute;
 	left:0px;
 	right: 0px;
 	top:0px;
 	bottom: 0px;
+	overflow: auto;
 }
 #main.blue{
 	background-color: #12a6eb;
 }
 #main.pink{
-	background-color: #FFFF00;
+	background-color: #FFA800;
 }
 .self_img{
 	border-radius: 50%;
@@ -321,7 +322,7 @@ td { vertical-align: top; }
 	color:#FFFFFF;
 	
 }
-#main h1{
+#main h1.heading{
 	font-size:60px;
 	text-shadow:1px 1px 1px  #eee;
 	

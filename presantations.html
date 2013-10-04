@@ -17,6 +17,51 @@
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="stylesheet" href="css/style.css">
+  <style>
+  	html{
+			height: 100%;
+			
+		}
+			body{
+				background:#Eaeaea;
+				padding-bottom: 120px;
+				height:100%;
+				
+			}
+			#main h1.heading{
+				color:#2A333C;
+				font-size:55px;
+				font-family:"raleway" sans-serif;
+				font-weight:bold;
+				letter-spacing:1px;
+			}
+  	header{
+				position:fixed;
+				bottom: 0px;
+				left: 0px;
+				right:0px;
+				background: #2A333C;
+				height: 50px;
+				z-index: 10;
+				
+			}
+			
+			.presItem{
+				width:300px;
+				height: 200px;
+				background:#2A333C;
+				float:left;
+				margin-right:50px;
+				margin-bottom:50px;
+				font-family:"lato" sans-serif;
+				padding:20px;
+			}
+			.presItem .presTitle{
+				letter-spacing:1px;
+				font-weight:normal;
+			}
+  </style>
+  
 </head>
 
 <body>
@@ -30,13 +75,13 @@
 	<li class="menuItem"><a href="#">Presantations</a></li>
 	<li class="menuItem"><a href="findme.html">Find me</a></li>
 </ul>
-<hr />
+
     </header>
     <div id="main" role="main">
-    	<h1>Presantations</h1>
+    	<h1 class="heading">Presantations</h1>
     	<div class="presList">
     		<div class="presItem">
-    			<h2>HTML5: manage the web!</h2>
+    			<h2 class="presTitle">HTML5: manage the web!</h2>
     			<div class="screenshot"></div>
     			<div class="presdesc"></div>
     		</div>

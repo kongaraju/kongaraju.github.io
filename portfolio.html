@@ -18,22 +18,38 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="stylesheet" href="css/style.css">
 		<style>
+		html{
+			height: 100%;
+			
+		}
 			body{
 				background:#Eaeaea;
+				padding-bottom: 120px;
+				height:100%;
+				
 			}
+			
 			#main h1.heading{
 				color:#B23D31;
 				font-size:55px;
 				font-family:"raleway" sans-serif;
 				font-weight:bold;
+				letter-spacing:1px;
 			}
+			
 			.tagline{
 				color:#8E8C8D;
 				float:right;
 				font-size:25px;
-				margin-top:-50px;
+				margin-top:-100px;
 				font-family:"lato" sans-serif;
 			}
+			.portfolioItem{
+				width:400px;
+				float:left;
+				margin-right:50px;
+			}
+			
 			.screenshot{
 				display:inline-block;
 				background:#FFFFFF;
@@ -41,6 +57,27 @@
 				box-shadow: 0px 1px 1px rgba(0,0,0,.1);
 				border-bottom: 1px solid #EAEAEA;
 				
+				
+			}
+			
+			#main h1.portTitle{
+				color:#B23D31;
+				font-family:"lato" sans-serif;
+			}
+			.portdesc{
+				color:#8E8C8D;
+				font-size:15px;
+				font-family:"lato" sans-serif;
+				line-height: 20px;
+			}
+			header{
+				position:fixed;
+				bottom: 0px;
+				left: 0px;
+				right:0px;
+				background: #B23D31;
+				height: 50px;
+				z-index: 10;
 				
 			}
 		</style>
@@ -80,24 +117,28 @@
 				<p class="tagline"><span style="font-size: 50px; height: 35px; display: inline-block;">&ldquo;</span> my work speaks for me.</p>
 				<div class="portfolioList">
 					<div class="portfolioItem">
-						<h3>antkorp</h3>
-						<div class="screenshot"><img src="img/screen1.png" />
+						
+						<div class="screenshot"><img src="img/screen1.png" alt="antkorp screen shot" />
 						</div>
+						<h1 class="portTitle">Antkorp</h1>
 						<div class="portdesc">
 							<p>
-								antkorp is a Enterprise Collaboration and Communication Tool, built on top using HTML5. Which is a realtime application gives native speed to the user on browser. It was developed using Websockets,Backbone,underscore,jQuery,Requirejs,etc.. It is complete object oriented largescale application based on MVC architecture. It meets all the latest technologies by pushing their bounderies.
+								Antkorp is a Enterprise Collaboration and Communication Tool, built on top using HTML5.
+								 Developed using Websockets, Backbone, underscore, jQuery, Requirejs,etc.. It is pure object oriented largescale application based on MVC architecture.
 							</p>
-							<p>
-								Worked on Complete font end design and developement, still development in progress.
-							</p>
-
 						</div>
 					</div>
 					<div class="portfolioItem">
-						<h3>Board Games</h3>
-						<div class="screenshot"></div>
+						
+						<div class="screenshot">
+							<img src="img/screen1.png" alt="Games screen shots" />
+						</div>
+						<h1 class="portTitle">RealTime Multi-player Games</h1>
 						<div class="portdesc">
-							Developed two multi-player games. Which are real time applications built with HTML5. used bootstrap for responsive nature of applications. Games produces native speed and have good user experience.
+							<p>Developed two multi-player games. 
+							Which are real time applications built with HTML5. used bootstrap for responsive nature of applications.
+							 Games produces native speed and have good user experience.
+							 </p>
 						</div>
 					</div>
 				</div>
