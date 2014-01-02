@@ -247,7 +247,7 @@ td { vertical-align: top; }
 	line-height:30px;
 	width:100px;
 	font-size:15px;
-	font-family:"raleway";
+	font-family:"raleway" ,sans-serif;
 	font-weight: bold;
 }
 .menuItem a[href="#"]{
@@ -328,8 +328,9 @@ td { vertical-align: top; }
 	
 }
 #Home p{
-	font-size:15px;
+	font-size:20px;
 	color:#FFFFFF;
+	text-align:justify;
 }
 
 .findItem ul li{
