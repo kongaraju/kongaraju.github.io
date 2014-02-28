@@ -218,7 +218,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       </div>
       <div class="modal-footer">
        
-        <a href="package/antkorp_1.0_ubuntu_limited_alpha_amd64.deb" download="antkorp_1.0_ubuntu_limited_alpha_amd64.deb"  target="_blank" type="button" class="btn btn-success">Accept and Download</a>
+        <a  onclick="_gaq.push(['_trackEvent','Download','Package',this.href]);" href="package/antkorp_1.0_ubuntu_limited_alpha_amd64.deb" download="antkorp_1.0_ubuntu_limited_alpha_amd64.deb"  target="_blank" type="button" class="btn btn-success">Accept and Download</a>
       </div>
     </div>
   </div>
@@ -247,6 +247,20 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+
+
+<!-- GOOGLE ANALYTICS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48535302-1', 'kongaraju.in');
+  ga('send', 'pageview');
+
+</script>
+
 
 </body>
 
