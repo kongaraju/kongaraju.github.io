@@ -26,6 +26,8 @@ body {
 	padding:10px;
 	border-radius: 5px;
 	background:#ccc;
+	
+	
 }
 .headline > .container > h1 {
 	font-size: 130px;
@@ -69,6 +71,16 @@ margin: 0px 130px;
 
 footer {
 	margin: 50px 0;
+}
+
+.footer{
+	padding:10px;
+	background:#F8F8F8;
+	border-top: 1px solid #E7E7E7;
+}
+
+.lead{
+	color:#777;
 }
 
 /* RESPONSIVE CSS */
