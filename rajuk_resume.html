@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		@import url("http://fonts.googleapis.com/css?family=Lato:100");
+		@import url("http://fonts.googleapis.com/css?family=Quicksand:300");
+		
+		body{
+			background:#CCCCCC;
+			
+		}
+		
+			.main{
+				width:800px;
+				height: auto;
+				margin: 0px auto;
+				padding:10px;
+				background:#FFFFFF;
+			}
+			.headSection{
+				position:relative;
+				margin: 10px 0px;
+				height: 200px;
+			}
+			.titleSection{
+				width:300px;
+				margin:0px auto;
+				display: inline-block;
+				position:relative;
+				vertical-align: top;
+			}
+			.title{
+				font-size:25px;
+				padding:5px 0px;
+			}
+			.name.title{
+				/*font-size:75px;*/
+				text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+				display:block;
+			}
+			.name.title .first-name{
+				font-size:95px;
+				text-transform:uppercase;
+			}
+			.name.title .last-name{
+				font-size:55px;
+			}
+			.work.title{
+				
+				text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+				display: block;
+				position:absolute;
+				bottom: 0px;
+				left:100%;
+			}
+			.mobno,.email{
+				font-size:15px;
+				padding: 0px 5px;
+				
+			}
+			.address{
+				position:absolute;
+				top: 10px;
+				right:10px;
+				padding: 10px;
+background: #EEE;
+color: #555;
+padding-right: 50px;
+margin-right: -20px;
+				
+			}
+			.address span{
+				display:block;
+				font-size:15px;
+			}
+			/*
+			 * bar
+			 */
+			.efw{
+				width: 400px;
+				margin:0px auto;
+				height: 100%;
+			}
+			.picbar{
+				height: 100%;
+				width: 30px;
+				display:inline-block;
+				border-bottom:5px solid #555555;
+				border-bottom-left-radius: 3px;
+				border-bottom-right-radius: 3px;
+				background: #B3DD2E;
+				margin-right:10px;
+				margin-top: -10px;
+			}
+			
+			/*top& bottom bars
+			*/
+			
+			.topbar,.bottombar{
+				display: block;
+				height:10px;
+				border-radius: 3px;
+				margin: 10px 0px;
+				background: #555555;
+				
+			}
+			
+			/*
+			 * sections
+			 */
+			.sectionhead{
+				border-right:5px solid #B3DD2E;
+			}
+			.section{
+				margin:20px auto;
+				width:550px;
+				padding: 0px 20px;
+				
+				border-radius: 5px;
+			}
+			.event{
+				margin: 10px auto;
+			}
+			.duration{
+				font-size:20px;
+				width:100px;
+				display: inline-block;
+				text-align:right;
+			}
+			.snap{
+				display:inline-table;
+				width:400px;
+				margin:0px 5px;
+				padding: 5px;
+				background: #EEE;
+				position: relative;
+			}
+			.snap:before{
+				content:"";
+				position:absolute;
+				top: 25px;
+right: 100%;
+border-top: 10px solid rgba(0, 0, 0, 0);
+border-right: 0px solid rgba(0, 0, 0, 0);
+border-left: 15px solid rgba(0, 0, 0, 0);
+border-top-color: #EEEEEE;
+			}
+			
+			.what{
+				display:inline-table;
+				width:300px;
+			}
+			.what span{
+				display:block;
+			}
+			.position{
+				border-bottom: 1px solid #CCCCCC;
+				color: #555;
+			}
+			.where{
+				display:inline-table;
+				width:100px;
+				font-size:16px;
+				font-weight:bold;
+				color:#333;
+			}
+			
+			/*
+			 * skills
+			 */
+			.skillsSection{
+				border: none;
+			}
+			.skill{
+				padding: 5px 0px;
+				
+			}
+			.skill .bar{
+				width:100%;
+				background:#ddd;
+				height: 10px;
+				display:block;
+			}
+			
+			.skill .bar .strength{
+				width: 50%;
+				background:#B3DD2E;
+				height:100%;
+				display: block;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="topbar"></div>
+		<div class="headSection">
+			<div class="efw"> <div class="picbar"></div>
+			<div class="titleSection">
+			<span class="name title"> <span class="last-name"> Konga</span><span class="first-name"> Raju</span></span> 
+			<span class="email"> kongaraju@gmail.com</span><span class="mobno">+918125865045</span>
+			
+			<span class="work title"> Webdesigner&amp; Webdeveloper</span>
+			</div>
+			</div>
+			<div class="address">
+				<span >Banglore</span>
+				<span>India-520013</span>
+			</div>
+			
+		</div>
+		<hr />
+		<div class="sectionhead">
+		<div class="qualificationSection section">
+			<div class="qualification title">
+				Formations
+			</div>
+			<div class="qualification event">
+				<span class="duration">2009-2012</span>
+				<div class="snap"> 
+					<div class="what"> 
+						<span class="position"> Master of Computer Applications</span>
+						<span class="stream"> Computer Science</span>
+					</div>   
+					<div class="where"> 
+					Andhra Loyola College
+					</div>
+				</div>
+			</div>
+			<div class="qualification event">
+				<span class="duration">2006-2009</span>
+				<div class="snap"> 
+					<div class="what"> 
+						<span class="position"> Bachelors Degree</span>
+						<span class="stream"> Sciences</span>
+					</div>   
+					<div class="where"> 
+					P.B. Siddhartha College
+					</div>
+				</div>
+			</div>
+			
+			<div class="qualification event">
+				<span class="duration">2004-2006</span>
+				<div class="snap"> 
+					<div class="what"> 
+						<span class="position"> Intermediate Education</span>
+						<span class="stream"> Sciences | Mathematics</span>
+					</div>   
+					<div class="where"> 
+					P.B. Siddhartha College
+					</div>
+				</div>
+			</div>
+			<div class="qualification event">
+				<span class="duration">2004</span>
+				<div class="snap"> 
+					<div class="what"> 
+						<span class="position"> Secondary Education</span>
+						<span class="stream"> Sciences | Mathematics | Languages</span>
+					</div>   
+					<div class="where"> 
+					V.M.C. H. School
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		</div>
+		<div class="sectionhead">
+		<div class="experienceSection section">
+			
+			<div class="experience title">
+				Professional Experience
+			</div>
+			<div class="experience event">
+				<span class="duration">2012</span>
+				<div class="snap"> 
+					<div class="what"> 
+						<span class="position"> Application Developer</span>
+						<p class="stream"> Building High-end Web Applications by pushing the bounderies of HTML5, Javascript APIs,</p>
+					</div>   
+					<div class="where"> 
+					Antkorp
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="skillsSection section">
+			<div class="skill title">
+				Skills
+			</div>
+			<div class="skill">
+				<span>HTML5</span><div class="bar"><div class="strength" style="width: 75%;"></div></div>
+			</div>
+			<div class="skill">
+				<span>Javascript</span><div class="bar"><div class="strength" style="width: 70%;"></div></div>
+			</div>
+			<div class="skill">
+				<span>CSS3</span><div class="bar"><div class="strength" style="width: 60%;"></div></div>
+			</div>
+			<div class="skill">
+				<span>PHP</span><div class="bar"><div class="strength" style="width: 65%;"></div></div>
+			</div>
+			<div class="skill">
+				<span>Mysql</span><div class="bar"><div class="strength" style="width: 60%;"></div></div>
+			</div>
+			<div class="skill">
+				<span class="duration">Tools </span>
+			<div class="snap">
+				<span class="position">Frameworks</span>
+				<div><span>Jquery | </span><span>Bakcbone | </span><span>RequireJS</span></div>
+			</div>
+			</div>
+		</div>
+		<div class="bottombar"></div>
+		</div>
+	</body>
+</html>

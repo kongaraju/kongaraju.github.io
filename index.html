@@ -1,1 +1,171 @@
-<h1>Konga Raju</h1>
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>K Raju</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="css/font.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  
+  .bioBox{
+  	
+  }
+  
+			.find_link {
+				text-decoration: none;
+				color: #FFFFFF;
+				font-size: 45px;
+				line-height: 45px;
+			}
+			a:visited {
+				color: #FFFFFF;
+			}
+			a:hover{
+				color:#FFFFFF;
+				text-shadow:1px 1px 1px rgba(255,255,255,.3);
+			}
+			.findIcon {
+				/*border: 1px solid #FFFFFF;
+				 border-radius: 50%;
+				 padding:5px;
+				 height:50px;
+				 width:50px;
+				 */
+			}
+			.find_link {
+				display: inline-block;
+				font-size: 20px;
+				cursor: pointer;
+				margin: 10px 5px;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				text-align: center;
+				position: relative;
+				z-index: 1;
+				color: #FFF;
+				/*box-shadow: 0 0 0 3px #FFF;*/
+				-webkit-transition: color 0.3s;
+				-moz-transition: color 0.3s;
+				transition: color 0.3s;
+			}
+		</style>
+  
+  
+  
+  <!-- end CSS-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+<ul class="menu">
+	<li class="menuItem"><a href="#">Home</a></li>
+	<li class="menuItem"><a href="http://blog.kongaraju.in" target="_blank">Blog</a></li>
+	<!-- <li class="menuItem"><a href="portfolio.html">Portfolio</a></li> -->
+	<!-- <li class="menuItem"><a href="Experiments.html">Codes</a></li> -->
+	<!-- <li class="menuItem"><a href="presantations.html">Slides</a></li> -->
+	<!-- <li class="menuItem"><a href="findme.html">Find me</a></li> -->
+</ul>
+<hr />
+    </header>
+    <div id="main" role="main" class="blue">
+    	<div id="Home" >
+    	<div class="bioBox">
+    		<!--<img class="self_img" height="150" width="150" src="img/hero_image.jpg" />-->
+    		<h1 class="self_name">Hi, I am Raju Konga</h1>
+    		<h2>Web Developer &amp;  Web Designer</h2>
+    		<p>Raju is a web Developer and Designer. He is all about pushing boundaries &amp; creating exciting new functionality. He is specialize in creating HTML5 web applications. He has a great passion for good design. He's usually exploring the Bay on bike or playing cricket.</p>
+    	</div>
+    	</div>
+    </div>
+    <div class="social">
+    	<ul>
+							<li class="findPlus findIcon ">
+								<a href="http://google.com/+KongaRaju" class="find_link icon-google-plus-2" target="_blank" > </a>
+							</li>
+
+							<li class="findFB findIcon">
+								<a href="http://facebook.com/raju.konga.9" class="find_link icon-facebook-3"> </a>
+							</li>
+							<li class="findTweet findIcon">
+								<a href="https://twitter.com/kongaraju" class="find_link icon-twitter-2">  </a>
+							</li>
+							<li class="findGit findIcon">
+								<a href="https://github.com/kongaraju" class="find_link icon-github-2"> </a>
+							</li>
+							<li class="findLin findIcon">
+								<a href="http://www.linkedin.com/profile/view?id=159113009&trk=hb_tab_pro_top" class="find_link icon-linkedin">  </a>
+							</li>
+						</ul>
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script defer src="js/plugins.js"></script>
+  <script defer src="js/script.js"></script>
+  <!-- end scripts-->
+
+	
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+=======
+<html>
+<body>
+<h1>Demos</h1>
+>>>>>>> 2354e7f6e1467ff2364c691582a9b950a017f15f
+</body>
+</html>
