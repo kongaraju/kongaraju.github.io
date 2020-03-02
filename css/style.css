@@ -222,21 +222,23 @@ td { vertical-align: top; }
    Author: Raju K
    ========================================================================== */
 
+.menu-container{
+	position:fixed;
+	bottom: 0px;
+	width: 100%;
+	z-index: 1;
+}
 
 .menu{
 	list-style-type:none;
 	height: 40px;
-	position:fixed;
-	bottom: 0px;
-	left:50%;
-	
+	max-width: 656px;
+	margin: 0 auto;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	color:#FFFFFF;
 	
-	z-index: 1;
-	margin:0px;
-	margin-left: -320px;
+	
 	
 }
 
@@ -245,10 +247,12 @@ td { vertical-align: top; }
 	float:left;
 	display: block;
 	line-height:30px;
-	width:100px;
+	/* width:100px; */
+	overflow: auto;
 	font-size:15px;
 	font-family:"raleway" ,sans-serif;
 	font-weight: bold;
+	padding: 10px 25px;
 }
 .menuItem a[href="#"]{
 	/*background-color: #12a6eb;
