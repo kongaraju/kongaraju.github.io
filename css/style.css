@@ -319,13 +319,15 @@ td { vertical-align: top; }
 	font-family:"raleway";
 }
 .portfolioList,.expList,.presList{
-	/*width: 500px;*/
+	width: 100%;
 	margin: 0px 10%;
 }
+
 #main h1,h2,h3{
 	color:#FFFFFF;
 	
 }
+
 #main h1.heading{
 	font-size:60px;
 	text-shadow:1px 1px 1px  #eee;
