@@ -43,6 +43,7 @@
 	<!-- CSS: implied media=all -->
 	<!-- CSS concatenated and minified via ant build script-->
 	<link rel="stylesheet" href="css/font.css" />
+	<link rel="stylesheet" href="css/animate.css" />
 	<link rel="stylesheet" href="css/style.css">
 	<style>
 		.bioBox {}
@@ -72,6 +73,8 @@
 				 */
 		}
 
+
+
 		.find_link {
 			display: inline-block;
 			font-size: 20px;
@@ -88,6 +91,7 @@
 			-webkit-transition: color 0.3s;
 			-moz-transition: color 0.3s;
 			transition: color 0.3s;
+
 		}
 	</style>
 
@@ -104,7 +108,7 @@
 </head>
 
 <body>
-
+	<canvas id="canvas"></canvas>
 	<div id="container">
 		<header class="menu-container">
 			<ul class="menu">
@@ -115,13 +119,13 @@
 				<li class="menuItem"><a href="presentations.html">Presentations</a></li>
 				<li class="menuItem"><a href="findme.html">Find me</a></li>
 			</ul>
-			
+
 		</header>
 		<div id="main" role="main" class="blue">
 			<div id="Home">
 				<div class="bioBox">
 					<!--<img class="self_img" height="150" width="150" src="img/hero_image.jpg" />-->
-					<h1 class="self_name">Hi, I am Raju Konga</h1>
+					<h1 class="self_name animated wobble">Hi, I am Raju Konga</h1>
 					<h2>Web Developer &amp; Web Designer</h2>
 					<p>Raju is a web Developer and Designer. He is all about pushing boundaries &amp; creating exciting
 						new functionality. He is specialize in creating HTML5 web applications. He has a great passion
@@ -141,8 +145,8 @@
 					<a href="https://github.com/kongaraju" class="find_link icon-github-2" target="_blank"> </a>
 				</li>
 				<li class="findLin findIcon">
-					<a href="https://www.linkedin.com/in/kongaraju/"
-						class="find_link icon-linkedin" target="_blank"> </a>
+					<a href="https://www.linkedin.com/in/kongaraju/" class="find_link icon-linkedin" target="_blank">
+					</a>
 				</li>
 			</ul>
 		</div>
@@ -157,6 +161,7 @@
 
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="js/lodash.js"></script>
 	<script>
 		window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')
 	</script>
@@ -188,6 +193,6 @@
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
 
-	</body>
+</body>
 
-	</html>
+</html>
