@@ -19,83 +19,55 @@
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="stylesheet" href="css/style.css">
 	<style>
-		html {
-			height: 100%;
-
-		}
-
-		body {
-			background: #Eaeaea;
-
-			height: 100%;
-
-		}
-
 		#main h1.heading {
 			color: #0DB497;
-			font-size: 55px;
-			font-family: "raleway"sans-serif;
-			font-weight: bold;
-			letter-spacing: 1px;
 		}
 
 		header {
-			position: fixed;
-			bottom: 0px;
-			left: 0px;
-			right: 0px;
 			background: #0DB497;
-			height: 50px;
-			z-index: 10;
 
 		}
 
 		.expItem {
 			height: 300px;
 			width: 400px;
-			background: #FFFFFF;
-			float: left;
-			margin-right: 50px;
-			margin-bottom: 50px;
-			font-family: "lato"sans-serif;
-			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 
 		.expItem .expTitle {
 			height: 50px;
-			line-height: 50px;
+			line-height: 5rem;
 			background: #0db497;
 			color: #FFFFFF;
-
 			text-align: center;
 			margin: 0px;
 			padding: 2px;
 			box-sizing: border-box;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
 
 		}
 
 		.expItem .expdesc {
-			color: #a5a5a5;
+			color: #151515;
 			padding: 10px;
 			box-sizing: border-box;
-			line-height: 25px;
-			font-size: 15px;
+			line-height: 2.5rem;
+			font-size: 1.5rem;
 		}
 
 		.expItem .expActions {
-			position: absolute;
-			bottom: 0px;
-			left: 0px;
-			right: 0px;
-			height: 80px;
+			height: 8rem;
 		}
 
 		.expActions .actBtn {
 
 			text-align: center;
-			padding: 15px 10px;
+			padding: 1.5rem 1rem;
 			width: 50%;
-			width: 150px;
+			width: 15rem;
 			margin: 15px;
 			float: left;
 			background-color: #0db497;
@@ -105,11 +77,11 @@
 		.actBtn .demoBtn,
 		.actBtn .codeBtn {
 
-			margin: 0px auto;
+			margin: 0 auto;
 			color: #FFFFFF;
-			font-size: 15px;
+			font-size: 1.5rem;
 			font-family: "lato"sans-serif;
-			width: 200px;
+			width: 20rem;
 			background-color: transparent;
 			text-decoration: none;
 		}
@@ -122,124 +94,153 @@
 
 <body>
 	<div id="container">
-		<header class="menu-container">
-			<ul class="menu">
-				<li class="menuItem"><a href="index.html">Home</a></li>
-				<li class="menuItem"><a href="http://kongaraju.blogspot.com" target="_blank">Blog</a></li>
-				<li class="menuItem"><a href="portfolio.html">Portfolio</a></li>
-				<li class="menuItem"><a href="#">Experiments</a></li>
-				<li class="menuItem"><a href="presentations.html">Presentations</a></li>
-				<li class="menuItem"><a href="findme.html">Find me</a></li>
-			</ul>
-		</header>
+
 		<div id="main" role="main">
 			<h1 class="heading">Experiments</h1>
 
 			<div class="expList">
-				<div class="expItem">
+				<div class="expItem boxItem">
 					<h3 class="expTitle">ArkeyJS</h3>
-					<div class="screenshot"></div>
+
 					<div class="expdesc">
-						<p>ArkeyJS is an attempt consolidated both the specs(V0 and V1) of HTML5 custom elements.
-							ArkeyJS is lightweight polyfill, which can be used to create custom elements irrespective of
+						<p>ArkeyJS is an attempt consolidated both the specs(V0 and V1)
+							of HTML5
+							custom elements.
+							ArkeyJS is lightweight polyfill, which can be used to
+							create
+							custom elements irrespective of
 							browser capability.</p>
 					</div>
 					<div class="expActions">
-						<span class="actBtn"><a class="demoBtn" href="http://kongaraju.in/arkeyjs/" target="_blank">More
+						<span class="actBtn"><a class="demoBtn"
+								href="http://kongaraju.in/arkeyjs/" target="_blank">More
 								Info</a></span>
-						<span class="actBtn"> <a target="_blank" href="https://github.com/kongaraju/arkeyjs"
+						<span class="actBtn"> <a target="_blank"
+								href="https://github.com/kongaraju/arkeyjs"
 								class=" codeBtn">Source Code</a></span>
 					</div>
 				</div>
-				<div class="expItem">
+				<div class="expItem boxItem">
 					<h3 class="expTitle">Thread Communication with MessageChannel</h3>
-					<div class="screenshot"></div>
+
 					<div class="expdesc">
-						<p>Communication between HTML5 webworkers using Message Channel API. This is to process the
-							requests simultanously as an independant process. It is very useful for building high
+						<p>Communication between HTML5 webworkers using Message Channel
+							API.
+							This is to process the
+							requests simultanously as an independant process. It is
+							very
+							useful for building high
 							processing web Applications.</p>
 					</div>
 					<div class="expActions">
-						<span class="actBtn"><a class="demoBtn" href="http://threadcomm.appspot.com/"
+						<span class="actBtn"><a class="demoBtn"
+								href="http://threadcomm.appspot.com/"
 								target="_blank">Live Demo</a></span>
-						<span class="actBtn"> <a target="_blank" href="https://github.com/kongaraju/msgChannelH5"
+						<span class="actBtn"> <a target="_blank"
+								href="https://github.com/kongaraju/msgChannelH5"
 								class=" codeBtn">Source Code</a></span>
 					</div>
 				</div>
-				<div class="expItem">
-					<h3 class="expTitle">Websocket Connection sharing over browser tabs.</h3>
-					<div class="screenshot"></div>
+				<div class="expItem boxItem">
+					<h3 class="expTitle">Websocket Connection sharing over browser tabs.
+					</h3>
+
 					<div class="expdesc">
-						<p>Sharing a single resource all over tabs. This hack is to maintain the context between the
+						<p>Sharing a single resource all over tabs. This hack is to
+							maintain the
+							context between the
 							windows. </p>
 					</div>
 					<div class="expActions">
-						<span class="actBtn disabled"><a class=" demoBtn" target="_blank">Live Demo</a></span><span
-							class="actBtn disabled"> <a class=" codeBtn " target="_blank">Source Code</a></span>
+						<span class="actBtn disabled"><a class=" demoBtn" target="_blank">Live
+								Demo</a></span><span class="actBtn disabled"> <a
+								class=" codeBtn " target="_blank">Source
+								Code</a></span>
 					</div>
 				</div>
-				<div class="expItem">
+				<div class="expItem boxItem">
 					<h3 class="expTitle">Peer to Peer Multiplayer Game</h3>
-					<div class="screenshot"></div>
+
 					<div class="expdesc">
-						Simple Multi-Player Game built using HTML5 canvas and Web RTC. This demostrates how we can build
-						real time games using Web RTC Data Channels. Demo is completly built using HTML5. Each action
+						Simple Multi-Player Game built using HTML5 canvas and Web RTC.
+						This
+						demostrates how we can build
+						real time games using Web RTC Data Channels. Demo is completly
+						built
+						using HTML5. Each action
 						updated using Peer to Peer communication only.
 					</div>
 					<div class="expActions">
 						<span class="actBtn"><a class=" demoBtn" target="_blank"
-								href="http://ptpgamedemo.appspot.com/">Live Demo</a></span><span class="actBtn"> <a
-								class=" codeBtn" target="_blank" href="https://github.com/kongaraju/p2pgame">Source
+								href="http://ptpgamedemo.appspot.com/">Live
+								Demo</a></span><span class="actBtn"> <a class=" codeBtn"
+								target="_blank"
+								href="https://github.com/kongaraju/p2pgame">Source
 								Code</a></span>
 
 					</div>
 				</div>
-				<div class="expItem">
+				<div class="expItem boxItem">
 					<h3 class="expTitle">Shared Drawing Board</h3>
-					<div class="screenshot"></div>
+
 					<div class="expdesc">
-						A Drawing board that is collaborated between participants. Each event is broadcast to all the
+						A Drawing board that is collaborated between participants. Each
+						event is
+						broadcast to all the
 						participants and the board is available to share socially.
 					</div>
 					<div class="expActions">
-						<span class="actBtn disabled"><a class=" demoBtn " target="_blank">Live Demo</a></span><span
-							class="actBtn disabled"> <a class=" codeBtn " target="_blank">Source Code</a></span>
+						<span class="actBtn disabled"><a class=" demoBtn " target="_blank">Live
+								Demo</a></span><span class="actBtn disabled"> <a
+								class=" codeBtn " target="_blank">Source
+								Code</a></span>
 					</div>
 				</div>
-				<div class="expItem">
+				<div class="expItem boxItem">
 					<h3 class="expTitle">ArkeyFloats</h3>
-					<div class="screenshot"></div>
+
 					<div class="expdesc">
-						<p>ArkeyFloats is web slideshow library with all presentation elements including code snippets, heading and animations.</p>
+						<p>ArkeyFloats is web slideshow library with all presentation
+							elements
+							including code snippets, heading and animations.</p>
 					</div>
 					<div class="expActions">
-						<span class="actBtn"><a class="demoBtn" href="http://kongaraju.in/arkeyfloats/" target="_blank">More
+						<span class="actBtn"><a class="demoBtn"
+								href="http://kongaraju.in/arkeyfloats/"
+								target="_blank">More
 								Info</a></span>
-						<span class="actBtn"> <a target="_blank" href="https://github.com/kongaraju/arkeyfloats"
+						<span class="actBtn"> <a target="_blank"
+								href="https://github.com/kongaraju/arkeyfloats"
 								class=" codeBtn">Source Code</a></span>
 					</div>
 				</div>
-				<div class="expItem">
+				<div class="expItem boxItem">
 					<h3 class="expTitle">Rawbot: webscraping tool</h3>
-					<div class="screenshot"></div>
+
 					<div class="expdesc">
-						Rawbot is an experiment to scrap any website using advanced methods. It can initiate any request
+						Rawbot is an experiment to scrap any website using advanced
+						methods. It
+						can initiate any request
 						with Aunonamous IP
 						, Random OS
 						, Random UserAgent
 						, Random Session
 						, and Random referrer.
-						With this scraping would be more anonymous and it user THOR browser and PhantomJs.
+						With this scraping would be more anonymous and it user THOR
+						browser and
+						PhantomJs.
 					</div>
 					<div class="expActions">
-						<span class="actBtn disabled"><a class=" demoBtn " target="_blank">Live Demo</a></span><span
-							class="actBtn"> <a class=" codeBtn " target="_blank"
-								href="https://github.com/kongaraju/rawbot">Source Code</a></span>
+						<span class="actBtn disabled"><a class=" demoBtn " target="_blank">Live
+								Demo</a></span><span class="actBtn"> <a
+								class=" codeBtn " target="_blank"
+								href="https://github.com/kongaraju/rawbot">Source
+								Code</a></span>
 					</div>
 				</div>
 				<!-- <div class="expItem">
     			<h3 class="expTitle">Source Sharing</h3>
-    			<div class="screenshot"></div>
+    			
     			<div class="expdesc"></div>
     			<div class="expActions">
     				<span class="actBtn"><a class=" demoBtn">Live Demo</a></span><span class="actBtn"> <a class=" codeBtn">Source Code</a></span>
@@ -247,14 +248,23 @@
     		</div> -->
 				<!--<div class="expItem">
     			<h3 class="expTitle">Webworker Communication with MessageChannel</h3>
-    			<div class="screenshot"></div>
+    			
     			<div class="expdesc"></div>
     		</div> -->
 			</div>
 		</div>
-		<footer>
+		<header class="menu-container">
+			<ul class="menu">
+				<li class="menuItem"><a href="index.html">Home</a></li>
+				<li class="menuItem"><a href="http://kongaraju.blogspot.com" target="_blank">Blog</a>
+				</li>
+				<li class="menuItem"><a href="portfolio.html">Portfolio</a></li>
+				<li class="menuItem"><a href="#">Experiments</a></li>
+				<li class="menuItem"><a href="presentations.html">Presentations</a></li>
+				<li class="menuItem"><a href="findme.html">Find me</a></li>
+			</ul>
+		</header>
 
-		</footer>
 	</div>
 	<!--! end of #container -->
 	<script src="js/p5.min.js"></script>

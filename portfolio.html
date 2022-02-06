@@ -19,81 +19,67 @@
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="stylesheet" href="css/style.css">
 	<style>
-		html {
-			height: 100%;
-
-		}
-
-		body {
-			background: #Eaeaea;
-			padding-bottom: 120px;
-			height: 100%;
-
+		header {
+			background: #B23D31;
 		}
 
 		#main h1.heading {
 			color: #B23D31;
-			font-size: 55px;
-			font-family: "raleway"sans-serif;
+			font-size: 5.5rem;
 			font-weight: bold;
 			letter-spacing: 1px;
 		}
 
 		.tagline {
 			color: #8E8C8D;
-			float: right;
-			font-size: 25px;
-			margin-top: -100px;
-			font-family: "lato"sans-serif;
+			font-size: 2.5rem;
+			font-family: "lato", sans-serif;
 		}
 
 		.portfolioItem {
 			width: 400px;
-			float: left;
-			margin-right: 50px;
 			height: 400px;
 		}
 
 		.screenshot {
-			display: inline-block;
+			/* display: inline-block; */
 			background: #FFFFFF;
-			padding: 15px;
-			box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
-			border-bottom: 1px solid #EAEAEA;
+			/* padding: 15px; */
+		}
 
-
+		.screenshot img {
+			height: 175px;
+			width: 100%;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
 		}
 
 		#main h1.portTitle {
 			color: #B23D31;
-			font-family: "lato"sans-serif;
+			font-family: "lato", sans-serif;
 		}
 
-		.portTitleLink, .portTitleLink:visited {
+		.portTitleLink,
+		.portTitleLink:visited {
 			text-decoration: none;
 			color: #B23D31;
-			font-family: "lato"sans-serif;
+			font-family: "lato", sans-serif;
 		}
-		.portTitleLink:hover{
-			color: #fc402c; 
+
+		.portTitleLink:hover {
+			color: #fc402c;
 		}
 
 		.portdesc {
 			color: #8E8C8D;
-			font-size: 15px;
-			font-family: "lato"sans-serif;
-			line-height: 20px;
+			font-size: 1.5rem;
+			font-family: "lato", sans-serif;
+			line-height: 2rem;
 		}
 
-		header {
-			position: fixed;
-			bottom: 0px;
-			left: 0px;
-			right: 0px;
-			background: #B23D31;
-			height: 50px;
-			z-index: 10;
-
+		.portTitle,
+		.portdesc {
+			padding: 0 1rem;
 		}
 	</style>
 
@@ -104,6 +90,181 @@
 
 <body>
 	<div id="container">
+
+		<div id="main" role="main">
+			<div class="titleLine">
+				<h1 class="heading">Portfolio</h1>
+				<p class="tagline"><span
+						style="font-size: 50px; height: 35px; display: inline-block;">&ldquo;</span>
+					my
+					work speaks for me.</p>
+			</div>
+			<div class="portfolioList">
+				<div class="portfolioItem boxItem">
+
+					<div class="screenshot">
+						<img height="175px" width="100%" src="img/screen3.png"
+							alt="Arkeydock screen shot" />
+					</div>
+					<h1 class="portTitle">
+						<a class="portTitleLink" target="_blank"
+							href="http://kongaraju.in/arkeydock/">ArkeyDock</a>
+
+					</h1>
+					<div class="portdesc">
+						<p>
+							ArkeyDock is an user interface for docker. It facilatates to
+							access all the features of
+							Docker through cloud hosting. It built using Docker remote APIs.
+							It can be deployed anywhere
+							and connect to any docker instance.
+						</p>
+					</div>
+				</div>
+				<div class="portfolioItem boxItem">
+
+					<div class="screenshot">
+						<img height="175px" width="100%" src="img/screen1.png"
+							alt="antkorp screen shot" />
+					</div>
+					<h1 class="portTitle">
+						<a class="portTitleLink" target="_blank"
+							href="http://ravikumartulugu.github.io/antkorp/">Antkorp</a>
+					</h1>
+					<div class="portdesc">
+						<p>
+							Antkorp is a Enterprise Collaboration and Communication Tool,
+							built on top using HTML5.
+							Developed using Websockets, Backbone, underscore, jQuery,
+							Requirejs, etc.. It is pure object
+							oriented largescale application based on MVC architecture.
+						</p>
+					</div>
+				</div>
+				<div class="portfolioItem boxItem">
+
+					<div class="screenshot">
+						<img height="175px" width="100%" src="img/arkeyjs.png"
+							alt="arkeyjs screen shot" />
+					</div>
+					<h1 class="portTitle">
+						<a class="portTitleLink" target="_blank"
+							href="http://kongaraju.in/arkeyjs/">ArkeyJS</a>
+					</h1>
+					<div class="portdesc">
+						<p>
+							ArkeyJS is a open-source polyfill library developed for using
+							custom element specification
+							v0 and v1. Since browsers dropping support for spec v0, it can
+							be used as a replacement with
+							minimal change in code.
+						</p>
+					</div>
+				</div>
+
+				<div class="portfolioItem boxItem">
+
+					<div class="screenshot">
+						<img height="175px" width="100%" src="img/Comecero.png"
+							alt="Comecero screenshot" />
+					</div>
+					<h1 class="portTitle">
+						<a class="portTitleLink" target="_blank"
+							href="https://comecero.com/">Comecero App</a>
+
+					</h1>
+					<div class="portdesc">
+						<p>Comecero is a e-commerce solution which comes with unique features.
+							Contributed to Comecero App
+							as a freelancer.
+						</p>
+					</div>
+				</div>
+				<div class="portfolioItem boxItem">
+
+					<div class="screenshot">
+						<img height="175px" width="100%" src="img/screen2.png"
+							alt="Games screen shots" />
+					</div>
+					<h1 class="portTitle">
+						<a class="portTitleLink" target="_blank">RealTime Multi-player Games</a>
+
+					</h1>
+					<div class="portdesc">
+						<p>Developed two multi-player games.
+							Which are real time applications built with HTML5. Used
+							bootstrap for responsive nature of
+							applications.
+							Games produces native speed and have good user experience.
+						</p>
+					</div>
+				</div>
+				<div class="portfolioItem boxItem">
+
+					<div class="screenshot">
+						<img height="175px" width="100%" src="img/resume.png"
+							alt="resume template screenshot" />
+					</div>
+					<h1 class="portTitle">
+						<a class="portTitleLink" target="_blank"
+							href="http://kongaraju.in/Resume/">CV Template</a>
+
+					</h1>
+					<div class="portdesc">
+						<p>
+							CV Template is designed using CSS3 and it is simple in design.
+							It gives placeholders for
+							different section in timline manner. A pure CSS3 template can be
+							used to present CV.
+						</p>
+					</div>
+				</div>
+
+
+				<div class="portfolioItem boxItem">
+
+					<div class="screenshot">
+						<img height="175px" width="100%" src="img/screen4.png"
+							alt="Cine Pass screen shot" />
+					</div>
+					<h1 class="portTitle">
+						<a class="portTitleLink" target="_blank"
+							href="http://kongaraju.in/cine-pass/">Cine Pass</a>
+
+					</h1>
+					<div class="portdesc">
+						<p>
+							Cine Pass is a website template to post movies and media conent.
+							It has unique features like
+							search and paginataion. It built using Angular 6 and demonstrate
+							all the features of
+							angular.
+						</p>
+					</div>
+				</div>
+				<div class="portfolioItem boxItem">
+
+					<div class="screenshot">
+						<img height="175px" width="100%" src="img/portfolio-site.png"
+							alt="Arkey portfolio site img" />
+					</div>
+					<h1 class="portTitle">
+						<a class="portTitleLink" target="_blank"
+							href="http://kongaraju.in/arkey-portfolio/">Arkey
+							Portfolio</a>
+
+					</h1>
+					<div class="portdesc">
+						<p>
+							Arkey portfolio a website template developed to share a
+							open-source project. It comes with
+							different categories to exibhit all experiments and code
+							snippets.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<header class="menu-container">
 			<ul class="menu">
 				<li class="menuItem">
@@ -127,148 +288,6 @@
 			</ul>
 
 		</header>
-		<div id="main" role="main">
-			<h1 class="heading">Portfolio</h1>
-			<p class="tagline"><span style="font-size: 50px; height: 35px; display: inline-block;">&ldquo;</span> my
-				work speaks for me.</p>
-			<div class="portfolioList">
-				<div class="portfolioItem">
-
-					<div class="screenshot">
-						<img height="175px" width="100%" src="img/screen3.png" alt="Arkeydock screen shot" />
-					</div>
-					<h1 class="portTitle">
-						<a class="portTitleLink" target="_blank" href="http://kongaraju.in/arkeydock/">ArkeyDock</a>
-
-					</h1>
-					<div class="portdesc">
-						<p>
-							ArkeyDock is an user interface for docker. It facilatates to access all the features of
-							Docker through cloud hosting. It built using Docker remote APIs. It can be deployed anywhere
-							and connect to any docker instance.
-						</p>
-					</div>
-				</div>
-				<div class="portfolioItem">
-
-					<div class="screenshot"><img src="img/screen1.png" alt="antkorp screen shot" />
-					</div>
-					<h1 class="portTitle">
-						<a class="portTitleLink" target="_blank"
-							href="http://ravikumartulugu.github.io/antkorp/">Antkorp</a></h1>
-					<div class="portdesc">
-						<p>
-							Antkorp is a Enterprise Collaboration and Communication Tool, built on top using HTML5.
-							Developed using Websockets, Backbone, underscore, jQuery, Requirejs, etc.. It is pure object
-							oriented largescale application based on MVC architecture.
-						</p>
-					</div>
-				</div>
-				<div class="portfolioItem">
-
-					<div class="screenshot">
-						<img height="175px" width="100%" src="img/arkeyjs.png" alt="arkeyjs screen shot" />
-					</div>
-					<h1 class="portTitle">
-						<a class="portTitleLink" target="_blank" href="http://kongaraju.in/arkeyjs/">ArkeyJS</a></h1>
-					<div class="portdesc">
-						<p>
-							ArkeyJS is a open-source polyfill library developed for using custom element specification
-							v0 and v1. Since browsers dropping support for spec v0, it can be used as a replacement with
-							minimal change in code.
-						</p>
-					</div>
-				</div>
-
-				<div class="portfolioItem">
-
-					<div class="screenshot">
-						<img height="175px" width="100%" src="img/Comecero.png" alt="Comecero screenshot" />
-					</div>
-					<h1 class="portTitle">
-						<a class="portTitleLink" target="_blank" href="https://comecero.com/">Comecero App</a>
-
-					</h1>
-					<div class="portdesc">
-						<p>Comecero is a e-commerce solution which comes with unique features. Contributed to Comecero App
-							as a freelancer.
-						</p>
-					</div>
-				</div>
-				<div class="portfolioItem">
-
-					<div class="screenshot">
-						<img height="175px" width="100%" src="img/screen2.png" alt="Games screen shots" />
-					</div>
-					<h1 class="portTitle">
-						<a class="portTitleLink" target="_blank">RealTime Multi-player Games</a>
-
-					</h1>
-					<div class="portdesc">
-						<p>Developed two multi-player games.
-							Which are real time applications built with HTML5. Used bootstrap for responsive nature of
-							applications.
-							Games produces native speed and have good user experience.
-						</p>
-					</div>
-				</div>
-				<div class="portfolioItem">
-
-					<div class="screenshot">
-						<img height="175px" width="100%" src="img/resume.png" alt="resume template screenshot" />
-					</div>
-					<h1 class="portTitle">
-						<a class="portTitleLink" target="_blank" href="http://kongaraju.in/Resume/">CV Template</a>
-
-					</h1>
-					<div class="portdesc">
-						<p>
-							CV Template is designed using CSS3 and it is simple in design. It gives placeholders for
-							different section in timline manner. A pure CSS3 template can be used to present CV.
-						</p>
-					</div>
-				</div>
-
-
-				<div class="portfolioItem">
-
-					<div class="screenshot">
-						<img height="175px" width="100%" src="img/screen4.png" alt="Cine Pass screen shot" />
-					</div>
-					<h1 class="portTitle">
-						<a class="portTitleLink" target="_blank" href="http://kongaraju.in/cine-pass/">Cine Pass</a>
-
-					</h1>
-					<div class="portdesc">
-						<p>
-							Cine Pass is a website template to post movies and media conent. It has unique features like
-							search and paginataion. It built using Angular 6 and demonstrate all the features of
-							angular.
-						</p>
-					</div>
-				</div>
-				<div class="portfolioItem">
-
-					<div class="screenshot">
-						<img height="175px" width="100%" src="img/portfolio-site.png" alt="Arkey portfolio site img" />
-					</div>
-					<h1 class="portTitle">
-						<a class="portTitleLink" target="_blank" href="http://kongaraju.in/arkey-portfolio/">Arkey
-							Portfolio</a>
-
-					</h1>
-					<div class="portdesc">
-						<p>
-							Arkey portfolio a website template developed to share a open-source project. It comes with
-							different categories to exibhit all experiments and code snippets.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer>
-
-		</footer>
 	</div>
 	<!--! end of #container -->
 	<script src="js/p5.min.js"></script>

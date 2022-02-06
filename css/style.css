@@ -2,11 +2,20 @@
   font-family: "raleway";
   src: url("raleway_thin-webfont.ttf");
 }
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.4rem;
+  font-family: "raleway", sans-serif;
+}
 
 html,
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
 }
 
 #canvas {
@@ -16,21 +25,25 @@ body {
 
 #container {
   display: flex;
+  flex-direction: column;
   height: 100%;
   position: absolute;
   inset: 0;
 }
 
+/* =================== Menu ============================= */
+
 .menu-container {
-  position: fixed;
-  bottom: 0px;
+  /* position: fixed;
+  bottom: 0; */
   width: 100%;
   z-index: 1;
+  flex-grow: 1;
 }
 
 .menu {
   list-style-type: none;
-  height: 40px;
+  height: 4rem;
   max-width: 656px;
   margin: 0 auto;
   border-top-left-radius: 5px;
@@ -42,17 +55,12 @@ body {
   list-style: none;
   float: left;
   display: block;
-  line-height: 30px;
+  line-height: 3rem;
   /* width:100px; */
   overflow: auto;
-  font-size: 15px;
-  font-family: "raleway", sans-serif;
+  font-size: 1.5rem;
   font-weight: bold;
-  padding: 10px 25px;
-}
-.menuItem a[href="#"] {
-  /*background-color: #12a6eb;
-	color: #FFFFFF;*/
+  padding: 1rem 2.5rem;
 }
 
 .menuItem a {
@@ -64,79 +72,51 @@ body {
   text-decoration: underline;
 }
 
+/* =================== Main ============================= */
 #main {
-  /* padding: 0px 50px 50px;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  overflow: auto; */
-  height: 100%;
+  /* height: 100%; */
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-#main.blue {
-  /* background-color: #12a6eb; */
+
+.main-full{
+  height: 100%;
 }
-#main.pink {
-  background-color: #ffa800;
-}
-.self_img {
-  border-radius: 50%;
-  -webkit-filter: grayscale(100%);
-  -webkit-transition: -webkit-transform 2s;
-  -webkit-transform-origin: center;
-}
-.self_img:hover {
-  -webkit-transform: scale(1.3);
-}
-/* .self_name{
-	-webkit-transition: -webkit-transform 1s;
--webkit-transform-origin:right;
-}
-.self_name:hover{
-	color: #EEEEEE;
-	-webkit-transform:rotate(10deg);
-} */
-.self_name:hover.animated {
-  animation-duration: 3s;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-}
-#Home:hover .self_img {
-  /* -webkit-filter:grayscale(0%); */
-}
+
 .social {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .social ul {
   list-style: none;
 }
+
 #Home,
 .findList {
-  /* width: 600px;
-  margin: 0px auto;
-  height: 250px;
-  margin-top: -175px;
-  margin-left: -300px;
-  top: 50%;
-  left: 50%;
-  position: absolute; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "raleway";
 }
+
 .portfolioList,
 .expList,
 .presList {
   width: 100%;
-  margin: 0px 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 8rem);
+  overflow: auto;
 }
 
 #main h1,
@@ -145,12 +125,8 @@ h3 {
   color: #ffffff;
 }
 
-#main h1.heading {
-  font-size: 60px;
-  text-shadow: 1px 1px 1px #eee;
-}
 #Home p {
-  font-size: 20px;
+  font-size: 2rem;
   color: #ffffff;
   text-align: justify;
 }
@@ -158,7 +134,7 @@ h3 {
 .findItem ul li {
   list-style-type: none;
   float: left;
-  padding: 5px;
+  padding: 0.5rem;
   display: block;
 }
 .find_link:hover {
@@ -174,22 +150,78 @@ h3 {
   -ms-transition: transform 0.2s ease-in-out;
 }
 
+.titleLine{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.titleLine .heading{
+  padding-left: 1rem;
+}
+
+.titleLine .tagline{
+  padding-right: 1rem;
+}
+/* =================== Pages Styles ============================= */
+
+header {
+  /* position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10; */
+
+}
+
+.boxItem{
+      background: rgba(255, 255, 255, 0.7);
+			margin: 1rem;
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, .1);
+			border-bottom: 1px solid #EAEAEA;
+			border-radius: 5px;
+}
+
+#main h1.heading {
+  font-size: 5.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 /* RESPONSIVE CSS */
 
 @media (max-width: 1200px) {
+  html{
+    font-size: 100%;
+  }
 }
 
 @media (max-width: 991px) {
+  html{
+    font-size: 80%;
+  }
 }
 
 @media (max-width: 768px) {
+  html{
+    font-size: 100%;
+  }
 }
 
 @media (max-width: 668px) {
+  html{
+    font-size: 80%;
+  }
 }
 
 @media (max-width: 640px) {
+  html{
+    font-size: 75%;
+  }
 }
 
 @media (max-width: 375px) {
+  html{
+    font-size: 60%;
+  }
 }
