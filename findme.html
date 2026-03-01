@@ -18,6 +18,10 @@
 
 	<link rel="stylesheet" href="css/font.css" />
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Tailwind CSS for modern layout and styling (loaded after base styles) -->
+	<script src="https://cdn.tailwindcss.com"></script>
+
 	<style>
 		header {
 			background: #ffa800;
@@ -46,38 +50,44 @@
 	</style>
 </head>
 
-<body>
-	<div id="container">
+<body class="bg-slate-950 text-slate-100 antialiased">
+	<div id="container" class="relative min-h-screen flex flex-col">
 
-		<div id="main" role="main" class="main-full">
+		<div id="main" role="main" class="main-full flex-1 flex flex-col items-center px-4 sm:px-8 py-16">
 
-			<div class="findList">
+			<div class="findList w-full max-w-3xl space-y-8">
+				<header class="space-y-3 text-center">
+					<h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+						Find me online
+					</h1>
+					<p class="text-base sm:text-lg text-slate-300">
+						Connect with me on your favorite platforms.
+					</p>
+				</header>
 				<div class="findItem">
-					<ul>
+					<ul class="flex flex-wrap justify-center gap-6">
 						<li class="findFB findIcon">
 							<a href="http://facebook.com/kongaraju9"
-								class="find_link icon-facebook-3" target="_blank">
-								<!--<img src="img/facebook.png" alt="Facebook" />
-								-->
+								class="find_link icon-facebook-3 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center text-2xl sm:text-3xl bg-slate-900/80 text-sky-400 hover:bg-sky-500/20 hover:text-sky-300 transition"
+								target="_blank">
 							</a>
 						</li>
 						<li class="findTweet findIcon">
 							<a href="https://twitter.com/kongaraju"
-								class="find_link icon-twitter-2" target="_blank">
-								<!--<img src="img/twitter.png" alt="twitter" />
-								-->
+								class="find_link icon-twitter-2 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center text-2xl sm:text-3xl bg-slate-900/80 text-sky-400 hover:bg-sky-500/20 hover:text-sky-300 transition"
+								target="_blank">
 							</a>
 						</li>
 						<li class="findGit findIcon">
 							<a href="https://github.com/kongaraju"
-								class="find_link icon-github-2" target="_blank">
-								<!-- <img src="img/github.png" alt="github" /> -->
+								class="find_link icon-github-2 w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center text-2xl sm:text-3xl bg-slate-900/80 text-slate-100 hover:bg-slate-800 hover:text-emerald-300 transition"
+								target="_blank">
 							</a>
 						</li>
 						<li class="findLin findIcon">
 							<a href="https://www.linkedin.com/in/kongaraju/"
-								class="find_link icon-linkedin" target="_blank">
-								<!-- <img src="img/linkedin.png" alt="LinkedIn" /> -->
+								class="find_link icon-linkedin w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center text-2xl sm:text-3xl bg-slate-900/80 text-sky-300 hover:bg-sky-500/20 hover:text-sky-200 transition"
+								target="_blank">
 							</a>
 						</li>
 					</ul>
@@ -85,25 +95,31 @@
 
 			</div>
 		</div>
-		<header class="menu-container">
-			<ul class="menu">
+		<header class="menu-container border-t border-slate-800/80 bg-slate-950/80 backdrop-blur">
+			<ul class="menu flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base">
 				<li class="menuItem">
-					<a href="index.html">Home</a>
+					<a href="index.html"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Home</a>
 				</li>
 				<li class="menuItem">
-					<a href="http://kongaraju.blogspot.com" target="_blank">Blog</a>
+					<a href="http://kongaraju.blogspot.com" target="_blank"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Blog</a>
 				</li>
 				<li class="menuItem">
-					<a href="portfolio.html">Portfolio</a>
+					<a href="portfolio.html"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Portfolio</a>
 				</li>
 				<li class="menuItem">
-					<a href="experiment.html">Experiments</a>
+					<a href="experiment.html"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Experiments</a>
 				</li>
 				<li class="menuItem">
-					<a href="presentations.html">Presentations</a>
+					<a href="presentations.html"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Presentations</a>
 				</li>
 				<li class="menuItem">
-					<a href="#">Find me</a>
+					<a href="#"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Find me</a>
 				</li>
 			</ul>
 		</header>

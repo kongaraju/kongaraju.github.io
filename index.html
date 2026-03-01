@@ -1,7 +1,5 @@
 <!doctype html>
-
 <html class="no-js" lang="en">
-
 <head>
 	<script>
 		(function (i, s, o, g, r, a, m) {
@@ -20,126 +18,432 @@
 		ga('send', 'pageview');
 	</script>
 	<meta charset="utf-8">
-
-	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
 	<title>Raju Konga</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
-
-	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-	<!-- CSS: implied media=all -->
-	<!-- CSS concatenated and minified via ant build script-->
-	<link rel="stylesheet" href="css/font.css" />
-	<link rel="stylesheet" href="css/style.css">
+	<!-- Tailwind CSS -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	
+	<!-- Modern fonts from Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	
 	<style>
-		.bioBox {
-			padding: 2rem;
-			max-width: 600px;
+		:root {
+			color-scheme: light dark;
 		}
 
-		a:visited {
-			color: #FFFFFF;
+		* {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		}
 
-		a:hover {
-			color: #FFFFFF;
-			text-shadow: 1px 1px 1px rgba(255, 255, 255, .3);
+		/* System-adaptive theme variables */
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bg-primary: 255 255 255;
+				--bg-secondary: 249 250 251;
+				--bg-tertiary: 243 244 246;
+				--text-primary: 17 24 39;
+				--text-secondary: 75 85 99;
+				--text-tertiary: 107 114 128;
+				--border-color: 229 231 235;
+				--accent-color: 16 185 129;
+				--accent-hover: 5 150 105;
+			}
 		}
 
-		.find_link {
-			text-decoration: none;
-			color: #FFFFFF;
-			font-size: 4.5rem;
-			line-height: 4.5rem;
-			display: inline-block;
-			font-size: 20px;
-			cursor: pointer;
-			margin: 10px 5px;
-			width: 2rem;
-			height: 2rem;
-			border-radius: 50%;
-			text-align: center;
-			position: relative;
-			z-index: 1;
-			color: #FFF;
-			/*box-shadow: 0 0 0 3px #FFF;*/
-			-webkit-transition: color 0.3s;
-			-moz-transition: color 0.3s;
-			transition: color 0.3s;
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg-primary: 15 23 42;
+				--bg-secondary: 30 41 59;
+				--bg-tertiary: 51 65 85;
+				--text-primary: 248 250 252;
+				--text-secondary: 203 213 225;
+				--text-tertiary: 148 163 184;
+				--border-color: 51 65 85;
+				--accent-color: 52 211 153;
+				--accent-hover: 16 185 129;
+			}
+		}
 
+		body {
+			background-color: rgb(var(--bg-primary));
+			color: rgb(var(--text-primary));
+		}
+
+		html {
+			scroll-behavior: smooth;
 		}
 	</style>
-
-
-
-	<!-- end CSS-->
 </head>
-
-<body>
-	<canvas id="canvas"></canvas>
-	<div class="social">
-		<ul>
-			<li class="findFB findIcon">
-				<a href="http://facebook.com/raju.konga.9" class="find_link icon-facebook-3"
-					target="_blank"> </a>
-			</li>
-			<li class="findTweet findIcon">
-				<a href="https://twitter.com/kongaraju" class="find_link icon-twitter-2"
-					target="_blank"> </a>
-			</li>
-			<li class="findGit findIcon">
-				<a href="https://github.com/kongaraju" class="find_link icon-github-2" target="_blank">
+<body class="antialiased transition-colors duration-300">
+	<div class="min-h-screen flex flex-col" style="background-color: rgb(var(--bg-primary))">
+		<header class="sticky top-0 z-20 backdrop-blur-md" style="border-bottom: 1px solid rgb(var(--border-color)); background-color: rgba(var(--bg-primary), 0.9)">
+			<nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
+				<a href="#top" class="text-sm font-semibold tracking-tight" style="color: rgb(var(--text-primary))">
+					Raju Konga
 				</a>
-			</li>
-			<li class="findLin findIcon">
-				<a href="https://www.linkedin.com/in/kongaraju/" class="find_link icon-linkedin"
-					target="_blank">
-				</a>
-			</li>
-		</ul>
-	</div>
-	<div id="container">
-
-		<div id="main" role="main" class="blue main-full">
-			<div id="Home">
-				<div class="bioBox">
-					<h1>Hi, I am Raju Konga</h1>
-					<h2>Web Developer</h2>
-					<p>Raju is a Web Developer. He is all about pushing boundaries &amp; creating
-						exciting
-						new functionality. He specializes in creating HTML5 single page web
-						applications. He has a great passion
-						for developing applications using cutting edge technologies. He's
-						usually exploring the Bay or playing cricket.</p>
-				</div>
-			</div>
-		</div>
-		<header class="menu-container">
-			<ul class="menu">
-				<li class="menuItem"><a href="#">Home</a></li>
-				<li class="menuItem"><a href="http://blog.kongaraju.in" target="_blank">Blog</a></li>
-				<li class="menuItem"><a href="portfolio.html">Portfolio</a></li>
-				<li class="menuItem"><a href="experiment.html">Experiments</a></li>
-				<li class="menuItem"><a href="presentations.html">Presentations</a></li>
-				<li class="menuItem"><a href="findme.html">Find me</a></li>
-			</ul>
-
+				<ul class="flex items-center gap-6 text-sm font-medium" style="color: rgb(var(--text-secondary))">
+					<li><a href="#about" class="hover:opacity-70 transition-opacity">About</a></li>
+					<li><a href="#projects" class="hover:opacity-70 transition-opacity">Projects</a></li>
+					<li><a href="#experiments" class="hover:opacity-70 transition-opacity">Experiments</a></li>
+					<li><a href="#talks" class="hover:opacity-70 transition-opacity">Talks</a></li>
+					<li><a href="#contact" class="hover:opacity-70 transition-opacity">Contact</a></li>
+				</ul>
+			</nav>
 		</header>
+
+		<main id="top" class="flex-1">
+			<section id="about" class="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+				<div class="mx-auto flex max-w-5xl flex-col gap-12 lg:flex-row lg:items-center">
+					<div class="flex-1 space-y-6">
+						<p class="text-xs font-semibold uppercase tracking-widest" style="color: rgb(var(--accent-color))">
+							Web developer · HTML5 · Real‑time apps
+						</p>
+						<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight" style="color: rgb(var(--text-primary))">
+							Hi, I'm <span style="color: rgb(var(--accent-color))">Raju Konga</span>
+						</h1>
+						<p class="text-lg leading-relaxed max-w-xl" style="color: rgb(var(--text-secondary))">
+							I build performant, real‑time web applications with HTML5, modern JavaScript,
+							and web platform APIs. I love turning complex ideas into simple, interactive
+							experiences that feel fast, reliable, and delightful to use.
+						</p>
+						<p class="text-base max-w-xl" style="color: rgb(var(--text-tertiary))">
+							From Docker dashboards and collaboration tools to multiplayer games and custom elements,
+							my work spans product UI, deep browser APIs, and scalable front‑end architecture.
+						</p>
+						<div class="flex flex-wrap gap-3 pt-4">
+							<a href="#projects"
+								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity"
+								style="background-color: rgb(var(--accent-color)); color: rgb(var(--bg-primary))">
+								View selected projects
+							</a>
+							<a href="#experiments"
+								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold hover:opacity-70 transition-opacity"
+								style="border: 1px solid rgb(var(--border-color)); color: rgb(var(--text-primary))">
+								Explore experiments
+							</a>
+						</div>
+					</div>
+					<div class="flex-1">
+						<div
+							class="rounded-2xl p-8 shadow-sm"
+							style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h2 class="text-base font-semibold mb-5" style="color: rgb(var(--text-primary))">
+								What I've been working on
+							</h2>
+							<ul class="space-y-4 text-sm" style="color: rgb(var(--text-secondary))">
+								<li>
+									<span class="font-semibold" style="color: rgb(var(--accent-color))">ArkeyDock</span> – UI for managing Docker
+									instances in the cloud using Docker Remote APIs.
+								</li>
+								<li>
+									<span class="font-semibold" style="color: rgb(var(--accent-color))">Antkorp</span> – HTML5‑based enterprise
+									collaboration and communication platform.
+								</li>
+								<li>
+									<span class="font-semibold" style="color: rgb(var(--accent-color))">Real‑time multiplayer games</span> –
+									native‑feeling, WebSocket/WebRTC powered HTML5 games.
+								</li>
+								<li>
+									<span class="font-semibold" style="color: rgb(var(--accent-color))">ArkeyJS & ArkeyFloats</span> – custom
+									elements polyfill and HTML5 presentation tooling.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="projects" class="px-4 py-16 sm:px-6 lg:px-8" style="border-top: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+				<div class="mx-auto max-w-5xl space-y-8">
+					<header class="space-y-2">
+						<h2 class="text-3xl font-bold tracking-tight" style="color: rgb(var(--text-primary))">Selected projects</h2>
+						<p class="text-sm max-w-2xl" style="color: rgb(var(--text-tertiary))">
+							A sample of the products and interfaces I've designed and built across developer tools,
+							e‑commerce, and rich web applications.
+						</p>
+					</header>
+					<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+						<article
+							class="flex flex-col rounded-xl p-6 shadow-sm hover:-translate-y-1 transition-all"
+							style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-primary))">
+							<h3 class="text-base font-semibold mb-1" style="color: rgb(var(--text-primary))">ArkeyDock</h3>
+							<p class="text-xs uppercase tracking-widest mb-3" style="color: rgb(var(--text-tertiary))">
+								Docker UI · Cloud
+							</p>
+							<p class="text-sm flex-1" style="color: rgb(var(--text-secondary))">
+								Web interface for managing Docker hosts and containers remotely, exposing Docker
+								Remote APIs through a clean, browser‑based dashboard.
+							</p>
+							<a href="http://kongaraju.in/arkeydock/" target="_blank"
+								class="mt-4 text-sm font-semibold hover:opacity-70 transition-opacity"
+								style="color: rgb(var(--accent-color))">
+								View project →
+							</a>
+						</article>
+
+						<article
+							class="flex flex-col rounded-xl p-6 shadow-sm hover:-translate-y-1 transition-all"
+							style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-primary))">
+							<h3 class="text-base font-semibold mb-1" style="color: rgb(var(--text-primary))">Antkorp</h3>
+							<p class="text-xs uppercase tracking-widest mb-3" style="color: rgb(var(--text-tertiary))">
+								HTML5 · Collaboration
+							</p>
+							<p class="text-sm flex-1" style="color: rgb(var(--text-secondary))">
+								Enterprise collaboration and communication tool built with HTML5, WebSockets,
+								Backbone, RequireJS and a modular MVC architecture.
+							</p>
+							<a href="http://ravikumartulugu.github.io/antkorp/" target="_blank"
+								class="mt-4 text-sm font-semibold hover:opacity-70 transition-opacity"
+								style="color: rgb(var(--accent-color))">
+								View project →
+							</a>
+						</article>
+
+						<article
+							class="flex flex-col rounded-xl p-6 shadow-sm hover:-translate-y-1 transition-all"
+							style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-primary))">
+							<h3 class="text-base font-semibold mb-1" style="color: rgb(var(--text-primary))">ArkeyJS</h3>
+							<p class="text-xs uppercase tracking-widest mb-3" style="color: rgb(var(--text-tertiary))">
+								Open‑source · Custom elements
+							</p>
+							<p class="text-sm flex-1" style="color: rgb(var(--text-secondary))">
+								A lightweight polyfill that bridges custom elements spec v0 and v1, allowing existing
+								components to run consistently across browsers.
+							</p>
+							<div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold">
+								<a href="http://kongaraju.in/arkeyjs/" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--accent-color))">More info →</a>
+								<a href="https://github.com/kongaraju/arkeyjs" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--text-secondary))">Source code →</a>
+							</div>
+						</article>
+
+						<article
+							class="flex flex-col rounded-xl p-6 shadow-sm hover:-translate-y-1 transition-all"
+							style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-primary))">
+							<h3 class="text-base font-semibold mb-1" style="color: rgb(var(--text-primary))">Comecero App</h3>
+							<p class="text-xs uppercase tracking-widest mb-3" style="color: rgb(var(--text-tertiary))">
+								E‑commerce
+							</p>
+							<p class="text-sm flex-1" style="color: rgb(var(--text-secondary))">
+								Contributed as a freelancer to a feature‑rich e‑commerce platform with a focus on
+								purchasing flows and front‑end UX.
+							</p>
+							<a href="https://comecero.com/" target="_blank"
+								class="mt-4 text-sm font-semibold hover:opacity-70 transition-opacity"
+								style="color: rgb(var(--accent-color))">
+								View product →
+							</a>
+						</article>
+
+						<article
+							class="flex flex-col rounded-xl p-6 shadow-sm hover:-translate-y-1 transition-all"
+							style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-primary))">
+							<h3 class="text-base font-semibold mb-1" style="color: rgb(var(--text-primary))">Real‑time multiplayer games</h3>
+							<p class="text-xs uppercase tracking-widest mb-3" style="color: rgb(var(--text-tertiary))">
+								HTML5 · WebRTC · WebSockets
+							</p>
+							<p class="text-sm flex-1" style="color: rgb(var(--text-secondary))">
+								Two real‑time multiplayer games built with canvas, WebRTC and WebSockets, designed to
+								feel native‑speed with responsive layouts.
+							</p>
+						</article>
+
+						<article
+							class="flex flex-col rounded-xl p-6 shadow-sm hover:-translate-y-1 transition-all"
+							style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-primary))">
+							<h3 class="text-base font-semibold mb-1" style="color: rgb(var(--text-primary))">CV Template & Arkey Portfolio</h3>
+							<p class="text-xs uppercase tracking-widest mb-3" style="color: rgb(var(--text-tertiary))">
+								UI · Templates
+							</p>
+							<p class="text-sm flex-1" style="color: rgb(var(--text-secondary))">
+								CSS‑only résumé template and portfolio site template designed to showcase experiments
+								and code snippets in a focused layout.
+							</p>
+							<div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold">
+								<a href="http://kongaraju.in/Resume/" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--accent-color))">CV template →</a>
+								<a href="http://kongaraju.in/arkey-portfolio/" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--text-secondary))">Arkey portfolio →</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="experiments" class="px-4 py-16 sm:px-6 lg:px-8" style="border-top: 1px solid rgb(var(--border-color))">
+				<div class="mx-auto max-w-5xl space-y-8">
+					<header class="space-y-2">
+						<h2 class="text-3xl font-bold tracking-tight" style="color: rgb(var(--text-primary))">Experiments & open‑source</h2>
+						<p class="text-sm max-w-2xl" style="color: rgb(var(--text-tertiary))">
+							I explore new browser features through small, focused experiments—from worker messaging to
+							WebRTC data channels and scraping pipelines.
+						</p>
+					</header>
+					<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+						<article class="rounded-xl p-6 space-y-3" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="font-semibold text-base" style="color: rgb(var(--text-primary))">Thread communication with MessageChannel</h3>
+							<p class="text-sm" style="color: rgb(var(--text-secondary))">
+								Experiment in coordinating work between HTML5 Web Workers using the MessageChannel API
+								to process requests in parallel.
+							</p>
+							<div class="flex flex-wrap gap-4 text-sm font-semibold pt-2">
+								<a href="http://threadcomm.appspot.com/" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--accent-color))">Live demo →</a>
+								<a href="https://github.com/kongaraju/msgChannelH5" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--text-secondary))">Source code →</a>
+							</div>
+						</article>
+						<article class="rounded-xl p-6 space-y-3" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="font-semibold text-base" style="color: rgb(var(--text-primary))">Peer‑to‑peer multiplayer game</h3>
+							<p class="text-sm" style="color: rgb(var(--text-secondary))">
+								Real‑time multiplayer game using canvas and WebRTC data channels—no server relay for
+								game state, just peer connections.
+							</p>
+							<div class="flex flex-wrap gap-4 text-sm font-semibold pt-2">
+								<a href="http://ptpgamedemo.appspot.com/" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--accent-color))">Live demo →</a>
+								<a href="https://github.com/kongaraju/p2pgame" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--text-secondary))">Source code →</a>
+							</div>
+						</article>
+						<article class="rounded-xl p-6 space-y-3" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="font-semibold text-base" style="color: rgb(var(--text-primary))">Shared drawing board</h3>
+							<p class="text-sm" style="color: rgb(var(--text-secondary))">
+								A collaborative drawing surface where every stroke is broadcast to all participants in
+								real time.
+							</p>
+						</article>
+						<article class="rounded-xl p-6 space-y-3" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="font-semibold text-base" style="color: rgb(var(--text-primary))">ArkeyFloats</h3>
+							<p class="text-sm" style="color: rgb(var(--text-secondary))">
+								HTML5 slideshow framework with support for code snippets, headings and rich
+								animations—built for technical presentations.
+							</p>
+							<div class="flex flex-wrap gap-4 text-sm font-semibold pt-2">
+								<a href="http://kongaraju.in/arkeyfloats/" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--accent-color))">More info →</a>
+								<a href="https://github.com/kongaraju/arkeyfloats" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--text-secondary))">Source code →</a>
+							</div>
+						</article>
+						<article class="rounded-xl p-6 space-y-3" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="font-semibold text-base" style="color: rgb(var(--text-primary))">Rawbot: web scraping tool</h3>
+							<p class="text-sm" style="color: rgb(var(--text-secondary))">
+								Experiment in anonymous scraping using rotating IPs, user agents, sessions and
+								referers, powered by TOR and PhantomJS.
+							</p>
+							<div class="flex flex-wrap gap-4 text-sm font-semibold pt-2">
+								<a href="https://github.com/kongaraju/rawbot" target="_blank"
+									class="hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--text-secondary))">Source code →</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="talks" class="px-4 py-16 sm:px-6 lg:px-8" style="border-top: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+				<div class="mx-auto max-w-5xl space-y-8">
+					<header class="space-y-2">
+						<h2 class="text-3xl font-bold tracking-tight" style="color: rgb(var(--text-primary))">Talks & presentations</h2>
+						<p class="text-sm max-w-2xl" style="color: rgb(var(--text-tertiary))">
+							I enjoy sharing what I learn about web platform capabilities and how to use them
+							pragmatically in production.
+						</p>
+					</header>
+					<div
+						class="rounded-xl p-8 shadow-sm flex flex-col md:flex-row gap-6 items-start"
+						style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-primary))">
+						<div class="flex-1 space-y-3">
+							<h3 class="text-base font-semibold" style="color: rgb(var(--accent-color))">
+								HTML5: manage the web!
+							</h3>
+							<p class="text-xs uppercase tracking-widest" style="color: rgb(var(--text-tertiary))">
+								HTML5 · APIs · Browser features
+							</p>
+							<p class="text-sm" style="color: rgb(var(--text-secondary))">
+								A talk covering modern HTML5 capabilities and JavaScript APIs—from storage and real‑time
+								communication to advanced graphics—focused on how to apply them in real projects.
+							</p>
+							<a href="https://html5managetheweb.appspot.com/" target="_blank"
+								class="inline-flex text-sm font-semibold hover:opacity-70 transition-opacity pt-2"
+								style="color: rgb(var(--accent-color))">
+								View presentation →
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="px-4 py-16 sm:px-6 lg:px-8" style="border-top: 1px solid rgb(var(--border-color))">
+				<div class="mx-auto max-w-5xl space-y-10">
+					<header class="space-y-3 text-center">
+						<h2 class="text-3xl font-bold tracking-tight" style="color: rgb(var(--text-primary))">Let's talk</h2>
+						<p class="text-sm max-w-xl mx-auto" style="color: rgb(var(--text-tertiary))">
+							Whether you're building a real‑time product, need help with a front‑end architecture,
+							or just want to jam on web platform ideas, feel free to reach out.
+						</p>
+					</header>
+					<div class="flex flex-col items-center gap-8">
+						<div class="flex flex-wrap justify-center gap-4">
+							<a href="mailto:you@example.com"
+								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity"
+								style="background-color: rgb(var(--accent-color)); color: rgb(var(--bg-primary))">
+								Email me
+							</a>
+							<a href="https://github.com/kongaraju" target="_blank"
+								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold hover:opacity-70 transition-opacity"
+								style="border: 1px solid rgb(var(--border-color)); color: rgb(var(--text-primary))">
+								GitHub
+							</a>
+							<a href="https://www.linkedin.com/in/kongaraju/" target="_blank"
+								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold hover:opacity-70 transition-opacity"
+								style="border: 1px solid rgb(var(--border-color)); color: rgb(var(--text-primary))">
+								LinkedIn
+							</a>
+							<a href="https://twitter.com/kongaraju" target="_blank"
+								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold hover:opacity-70 transition-opacity"
+								style="border: 1px solid rgb(var(--border-color)); color: rgb(var(--text-primary))">
+								Twitter
+							</a>
+						</div>
+						<p class="text-xs" style="color: rgb(var(--text-tertiary))">
+							Blog: <a href="http://blog.kongaraju.in" target="_blank"
+								class="underline underline-offset-4 hover:opacity-70 transition-opacity"
+								style="color: rgb(var(--text-secondary))">blog.kongaraju.in</a>
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer style="border-top: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+			<div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-5 text-xs sm:px-6" style="color: rgb(var(--text-tertiary))">
+				<span>© <span id="year"></span> Raju Konga</span>
+				<span>Built with HTML5 & Tailwind CSS</span>
+			</div>
+		</footer>
 	</div>
-	<!--! end of #container -->
 
-
-	<!-- scripts concatenated and minified via ant build script-->
-	<script defer src="js/script.js"></script>
-	<!-- end scripts-->
-
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
 </body>
-
 </html>

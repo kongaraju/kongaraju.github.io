@@ -18,78 +18,73 @@
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Tailwind CSS for modern layout and styling (loaded after base styles) -->
+	<script src="https://cdn.tailwindcss.com"></script>
+
 	<style>
-
 		#main h1.heading {
-			color: #2A333C;
-		}
-
-		header {
-			background: #2A333C;
+			color: #e5e7eb;
 		}
 
 		.presItem {
-			width: 500px;
-			height: 500px;
-			background: #2A333C;
-			float: left;
+			width: 100%;
+			max-width: 32rem;
 			margin: 1rem;
-			border-radius: 5px;
-		}
-
-		.presItem .presTitle {
-			letter-spacing: 1px;
-			/* font-weight: normal; */
-		}
-
-		.presdesc {
-			color: #fff;
-			font-size: 1.5rem;
-			margin: 15px 0;
-		}
-
-		.presTitle, .presdesc{
-			padding: 1.5rem;
-		}
-
-		a.presTitleLink, a.presTitleLink:visited{
-			color: #1ea1ff;
-			text-decoration: none;
+			border-radius: 1rem;
 		}
 	</style>
 
 </head>
 
-<body>
-	<div id="container">
-		
-		<div id="main" role="main" class="main-full">
-			<h1 class="heading">Presentations</h1>
-			<div class="presList">
-				<div class="presItem">
-					<h2 class="presTitle">
-						<a class="presTitleLink" target="_blank" href="https://html5managetheweb.appspot.com/">HTML5: manage the web!</a>
+<body class="bg-slate-950 text-slate-100 antialiased">
+	<div id="container" class="relative min-h-screen flex flex-col">
 
-					</h2>
-					<div class="screenshot">
-						<a target="_blank" href="https://html5managetheweb.appspot.com/"><img src="img/presentation1.png" width="100%" height="300px" alt="presentation snapshot" /></a>
-					</div>
-					<div class="presdesc">
-						Presentation given in to explain the HTML5 cutting edge features and latest use cases. It covers
-						end to end features in HTML5 and other latest javascript APIs.
+		<div id="main" role="main" class="main-full flex-1 flex flex-col items-center px-4 sm:px-8 py-12">
+			<div class="w-full max-w-4xl space-y-6">
+				<header class="space-y-3">
+					<h1 class="heading text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+						Presentations
+					</h1>
+					<p class="text-base sm:text-lg text-slate-300 max-w-2xl">
+						Talks and sessions where I share what I’ve learned about HTML5 and modern web APIs.
+					</p>
+				</header>
+
+				<div class="presList grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+					<div class="presItem boxItem bg-slate-900/70 backdrop-blur shadow-lg hover:shadow-emerald-500/30 hover:-translate-y-1 transition overflow-hidden">
+						<h2 class="presTitle text-lg font-semibold px-4 pt-4 pb-2">
+							<a class="presTitleLink text-emerald-300 hover:text-emerald-200 transition" target="_blank"
+								href="https://html5managetheweb.appspot.com/">HTML5: manage the web!</a>
+						</h2>
+						<div class="screenshot px-4 pb-4">
+							<a target="_blank" href="https://html5managetheweb.appspot.com/">
+								<img src="img/presentation1.png" width="100%" height="300px" alt="presentation snapshot"
+									class="rounded-xl object-cover w-full" />
+							</a>
+						</div>
+						<div class="presdesc px-4 pb-5 text-sm text-slate-200/90 leading-relaxed">
+							Presentation explaining cutting-edge HTML5 features and real-world use cases, covering
+							end-to-end capabilities in HTML5 and modern JavaScript APIs.
+						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
-		<header class="menu-container">
-			<ul class="menu">
-				<li class="menuItem"><a href="index.html">Home</a></li>
-				<li class="menuItem"><a href="http://kongaraju.blogspot.com" target="_blank">Blog</a></li>
-				<li class="menuItem"><a href="portfolio.html">Portfolio</a></li>
-				<li class="menuItem"><a href="experiment.html">Experiments</a></li>
-				<li class="menuItem"><a href="#">Presentations</a></li>
-				<li class="menuItem"><a href="findme.html">Find me</a></li>
+		<header class="menu-container border-t border-slate-800/80 bg-slate-950/80 backdrop-blur">
+			<ul class="menu flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base">
+				<li class="menuItem px-3 sm:px-4"><a href="index.html"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Home</a></li>
+				<li class="menuItem px-3 sm:px-4"><a href="http://kongaraju.blogspot.com" target="_blank"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Blog</a></li>
+				<li class="menuItem px-3 sm:px-4"><a href="portfolio.html"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Portfolio</a></li>
+				<li class="menuItem px-3 sm:px-4"><a href="experiment.html"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Experiments</a></li>
+				<li class="menuItem px-3 sm:px-4"><a href="#"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Presentations</a></li>
+				<li class="menuItem px-3 sm:px-4"><a href="findme.html"
+						class="block rounded-full px-3 py-1 hover:bg-slate-800/80 transition">Find me</a></li>
 			</ul>
 
 		</header>
