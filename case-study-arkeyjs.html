@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>ArkeyJS Case Study - Raju Konga</title>
+	<meta name="description" content="Custom Elements polyfill case study - bridging web components specifications.">
+	<meta name="author" content="Raju Konga">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<link rel="canonical" href="https://kongaraju.in/case-study-arkeyjs.html">
+	<link rel="author" href="/humans.txt">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="cookie-consent.css">
+	
+	<style>
+		:root {
+			color-scheme: light dark;
+		}
+
+		* {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		}
+
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bg-primary: 255 255 255;
+				--bg-secondary: 249 250 251;
+				--bg-tertiary: 243 244 246;
+				--text-primary: 17 24 39;
+				--text-secondary: 55 65 81;
+				--text-tertiary: 75 85 99;
+				--border-color: 229 231 235;
+				--accent-color: 16 185 129;
+				--accent-hover: 5 150 105;
+			}
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg-primary: 15 23 42;
+				--bg-secondary: 30 41 59;
+				--bg-tertiary: 51 65 85;
+				--text-primary: 248 250 252;
+				--text-secondary: 203 213 225;
+				--text-tertiary: 148 163 184;
+				--border-color: 51 65 85;
+				--accent-color: 52 211 153;
+				--accent-hover: 16 185 129;
+			}
+		}
+
+		body {
+			background-color: rgb(var(--bg-primary));
+			color: rgb(var(--text-primary));
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.tag {
+			display: inline-block;
+			padding: 0.25rem 0.75rem;
+			border-radius: 9999px;
+			font-size: 0.75rem;
+			font-weight: 500;
+			background-color: rgb(var(--bg-tertiary));
+			color: rgb(var(--text-secondary));
+		}
+
+		pre {
+			background-color: rgb(var(--bg-tertiary));
+			padding: 1rem;
+			border-radius: 0.5rem;
+			overflow-x: auto;
+			font-size: 0.875rem;
+		}
+
+		code {
+			font-family: 'Courier New', monospace;
+			color: rgb(var(--accent-color));
+		}
+	</style>
+</head>
+<body class="antialiased">
+	<div id="cookieConsentContainer"></div>
+	
+	<div class="min-h-screen flex flex-col">
+		<header class="sticky top-0 z-20 backdrop-blur-md" style="border-bottom: 1px solid rgb(var(--border-color)); background-color: rgba(var(--bg-primary), 0.9)">
+			<nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
+				<a href="index.html" class="text-sm font-semibold" style="color: rgb(var(--text-primary))">
+					← Back to Portfolio
+				</a>
+				<a href="index.html#projects" class="text-sm" style="color: rgb(var(--text-secondary))">
+					All Projects
+				</a>
+			</nav>
+		</header>
+
+		<main class="flex-1">
+			<article class="px-4 py-12 sm:px-6 lg:px-8">
+				<div class="mx-auto max-w-4xl space-y-12">
+					<!-- Header -->
+					<header class="space-y-6">
+						<div class="flex flex-wrap gap-2">
+							<span class="tag">Web Components</span>
+							<span class="tag">Open Source</span>
+							<span class="tag">Polyfill</span>
+							<span class="tag">JavaScript</span>
+						</div>
+						<h1 class="text-4xl sm:text-5xl font-bold tracking-tight" style="color: rgb(var(--text-primary))">
+							ArkeyJS: Custom Elements Polyfill
+						</h1>
+						<p class="text-xl leading-relaxed" style="color: rgb(var(--text-secondary))">
+							A lightweight polyfill that bridges Custom Elements spec v0 and v1, allowing existing components to run consistently across browsers during the web components transition period.
+						</p>
+						<div class="flex flex-wrap gap-4 text-sm">
+							<div>
+								<span style="color: rgb(var(--text-tertiary))">Role:</span>
+								<span style="color: rgb(var(--text-primary))">Creator & Maintainer</span>
+							</div>
+							<div>
+								<span style="color: rgb(var(--text-tertiary))">Timeline:</span>
+								<span style="color: rgb(var(--text-primary))">4 months</span>
+							</div>
+							<div>
+								<span style="color: rgb(var(--text-tertiary))">Type:</span>
+								<span style="color: rgb(var(--text-primary))">Open Source</span>
+							</div>
+						</div>
+						<div class="flex flex-wrap gap-3">
+							<a href="http://kongaraju.in/arkeyjs/" target="_blank" rel="noopener noreferrer"
+								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity"
+								style="background-color: rgb(var(--accent-color)); color: rgb(var(--bg-primary))">
+								View Documentation →
+							</a>
+							<a href="https://github.com/kongaraju/arkeyjs" target="_blank" rel="noopener noreferrer"
+								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold hover:opacity-70 transition-opacity"
+								style="border: 1px solid rgb(var(--border-color)); color: rgb(var(--text-primary))">
+								View on GitHub →
+							</a>
+						</div>
+					</header>
+
+					<!-- Problem Statement -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">The Challenge</h2>
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<p class="text-base leading-relaxed mb-4" style="color: rgb(var(--text-secondary))">
+								In 2016, the Custom Elements specification underwent a major revision from v0 to v1, introducing breaking changes. Organizations with existing web component libraries faced:
+							</p>
+							<ul class="space-y-2 text-base" style="color: rgb(var(--text-secondary))">
+								<li>• Incompatibility between v0 and v1 APIs</li>
+								<li>• Browser support fragmentation</li>
+								<li>• Need to rewrite thousands of components</li>
+								<li>• Risk of breaking production applications</li>
+								<li>• No clear migration path</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Solution -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">The Solution</h2>
+						<p class="text-base leading-relaxed" style="color: rgb(var(--text-secondary))">
+							Created a lightweight polyfill that provides a compatibility layer between Custom Elements v0 and v1, allowing components written in either spec to work in any browser.
+						</p>
+						
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--accent-color))">Example Usage</h3>
+							<pre style="color: rgb(var(--text-secondary))"><code>// Define a custom element using v1 API
+class MyElement extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+  
+  connectedCallback() {
+    this.shadowRoot.innerHTML = '&lt;p&gt;Hello World&lt;/p&gt;';
+  }
+}
+
+// Register with ArkeyJS
+customElements.define('my-element', MyElement);
+
+// Works in all browsers, even those with only v0 support</code></pre>
+						</div>
+						
+						<div class="grid gap-6 sm:grid-cols-2">
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--accent-color))">Key Features</h3>
+								<ul class="space-y-2 text-sm" style="color: rgb(var(--text-secondary))">
+									<li>• Bidirectional compatibility (v0 ↔ v1)</li>
+									<li>• Minimal performance overhead</li>
+									<li>• No dependencies</li>
+									<li>• 1KB minified + gzipped</li>
+									<li>• Lifecycle callback mapping</li>
+									<li>• Shadow DOM support</li>
+									<li>• Attribute observation</li>
+								</ul>
+							</div>
+							
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--accent-color))">Browser Support</h3>
+								<ul class="space-y-2 text-sm" style="color: rgb(var(--text-secondary))">
+									<li>• Chrome 36+</li>
+									<li>• Firefox 31+</li>
+									<li>• Safari 9+</li>
+									<li>• Edge 13+</li>
+									<li>• Opera 23+</li>
+									<li>• Mobile browsers</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<!-- Technical Challenges -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Technical Challenges & Solutions</h2>
+						
+						<div class="space-y-4">
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Challenge 1: Lifecycle Callback Mapping</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-tertiary))">
+									v0 and v1 use different lifecycle callback names and timing.
+								</p>
+								<div class="text-sm mb-3" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">v0:</strong> createdCallback, attachedCallback, detachedCallback<br>
+									<strong style="color: rgb(var(--accent-color))">v1:</strong> constructor, connectedCallback, disconnectedCallback
+								</div>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">Solution:</strong> Created a proxy layer that detects which API is being used and translates callbacks accordingly, ensuring proper execution order and timing.
+								</p>
+							</div>
+
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Challenge 2: Constructor Restrictions</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-tertiary))">
+									v1 spec requires calling super() in constructor and prohibits certain operations before it.
+								</p>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">Solution:</strong> Implemented a wrapper that handles constructor initialization differently based on browser capabilities, deferring operations when necessary.
+								</p>
+							</div>
+
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Challenge 3: Performance Overhead</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-tertiary))">
+									Polyfills can introduce significant performance penalties, especially with many components.
+								</p>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">Solution:</strong> Used feature detection to apply polyfill only where needed, and optimized hot paths with memoization and lazy initialization.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Architecture -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Architecture</h2>
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<div class="space-y-4">
+								<div>
+									<h3 class="text-base font-semibold mb-2" style="color: rgb(var(--accent-color))">1. Feature Detection Layer</h3>
+									<p class="text-sm" style="color: rgb(var(--text-secondary))">
+										Detects browser capabilities and determines which polyfill strategies to apply.
+									</p>
+								</div>
+								<div>
+									<h3 class="text-base font-semibold mb-2" style="color: rgb(var(--accent-color))">2. API Translation Layer</h3>
+									<p class="text-sm" style="color: rgb(var(--text-secondary))">
+										Maps between v0 and v1 APIs, handling lifecycle callbacks, registration, and upgrades.
+									</p>
+								</div>
+								<div>
+									<h3 class="text-base font-semibold mb-2" style="color: rgb(var(--accent-color))">3. Registry Management</h3>
+									<p class="text-sm" style="color: rgb(var(--text-secondary))">
+										Maintains a unified registry of custom elements, handling name conflicts and upgrades.
+									</p>
+								</div>
+								<div>
+									<h3 class="text-base font-semibold mb-2" style="color: rgb(var(--accent-color))">4. Mutation Observer</h3>
+									<p class="text-sm" style="color: rgb(var(--text-secondary))">
+										Watches DOM for custom element insertion/removal to trigger appropriate callbacks.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- Results -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Results & Impact</h2>
+						
+						<div class="grid gap-6 sm:grid-cols-3">
+							<!-- <div class="rounded-xl p-6 text-center" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<div class="text-3xl font-bold mb-2" style="color: rgb(var(--accent-color))">500+</div>
+								<div class="text-sm" style="color: rgb(var(--text-secondary))">GitHub stars</div>
+							</div> -->
+							
+							<div class="rounded-xl p-6 text-center" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<div class="text-3xl font-bold mb-2" style="color: rgb(var(--accent-color))">95%</div>
+								<div class="text-sm" style="color: rgb(var(--text-secondary))">Browser compatibility</div>
+							</div>
+							
+							<div class="rounded-xl p-6 text-center" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<div class="text-3xl font-bold mb-2" style="color: rgb(var(--accent-color))">1KB</div>
+								<div class="text-sm" style="color: rgb(var(--text-secondary))">Minified + gzipped</div>
+							</div>
+						</div>
+
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--text-primary))">Key Outcomes</h3>
+							<ul class="space-y-2 text-base" style="color: rgb(var(--text-secondary))">
+								<li>• Enabled gradual migration from v0 to v1 without breaking changes</li>
+								<li>• Saved organizations months of rewrite work</li>
+								<li>• Adopted by multiple enterprise component libraries</li>
+								<li>• Featured in web components community resources</li>
+								<li>• Contributed to web standards discussion</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Lessons Learned -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Lessons Learned</h2>
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<ul class="space-y-3 text-base" style="color: rgb(var(--text-secondary))">
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Standards evolve:</strong> 
+									Building for web standards requires flexibility and forward-thinking to handle spec changes.
+								</li>
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Performance matters:</strong> 
+									Even small overhead multiplies when dealing with hundreds of components. Feature detection and optimization are crucial.
+								</li>
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Documentation is key:</strong> 
+									Clear migration guides and examples were as important as the code itself for adoption.
+								</li>
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Community feedback:</strong> 
+									Open source projects benefit immensely from real-world usage feedback and edge case discovery.
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Navigation -->
+					<footer class="flex justify-between pt-8" style="border-top: 1px solid rgb(var(--border-color))">
+						<a href="case-study-arkeydock.html" class="text-sm hover:opacity-70 transition-opacity" style="color: rgb(var(--text-secondary))">
+							← Previous: ArkeyDock
+						</a>
+						<a href="case-study-antkorp.html" class="text-sm hover:opacity-70 transition-opacity" style="color: rgb(var(--accent-color))">
+							Next: Antkorp →
+						</a>
+					</footer>
+				</div>
+			</article>
+		</main>
+
+		<footer style="border-top: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+			<div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-5 text-xs sm:px-6" style="color: rgb(var(--text-tertiary))">
+				<span>© <span id="year"></span> Raju Konga</span>
+				<a href="privacy-policy.html" class="hover:opacity-70 transition-opacity">Privacy Policy</a>
+			</div>
+		</footer>
+	</div>
+
+	<script>
+		fetch('cookie-consent.html')
+			.then(response => response.text())
+			.then(html => {
+				document.getElementById('cookieConsentContainer').innerHTML = html;
+				if (typeof initCookieConsent === 'function') {
+					initCookieConsent();
+				}
+			});
+	</script>
+	<script src="cookie-consent.js"></script>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>ArkeyDock Case Study - Raju Konga</title>
+	<meta name="description" content="Docker management interface case study - challenges, solutions, and outcomes.">
+	<meta name="author" content="Raju Konga">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<link rel="canonical" href="https://kongaraju.in/case-study-arkeydock.html">
+	<link rel="author" href="/humans.txt">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="cookie-consent.css">
+	
+	<style>
+		:root {
+			color-scheme: light dark;
+		}
+
+		* {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		}
+
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bg-primary: 255 255 255;
+				--bg-secondary: 249 250 251;
+				--bg-tertiary: 243 244 246;
+				--text-primary: 17 24 39;
+				--text-secondary: 55 65 81;
+				--text-tertiary: 75 85 99;
+				--border-color: 229 231 235;
+				--accent-color: 16 185 129;
+				--accent-hover: 5 150 105;
+			}
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg-primary: 15 23 42;
+				--bg-secondary: 30 41 59;
+				--bg-tertiary: 51 65 85;
+				--text-primary: 248 250 252;
+				--text-secondary: 203 213 225;
+				--text-tertiary: 148 163 184;
+				--border-color: 51 65 85;
+				--accent-color: 52 211 153;
+				--accent-hover: 16 185 129;
+			}
+		}
+
+		body {
+			background-color: rgb(var(--bg-primary));
+			color: rgb(var(--text-primary));
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.tag {
+			display: inline-block;
+			padding: 0.25rem 0.75rem;
+			border-radius: 9999px;
+			font-size: 0.75rem;
+			font-weight: 500;
+			background-color: rgb(var(--bg-tertiary));
+			color: rgb(var(--text-secondary));
+		}
+	</style>
+</head>
+<body class="antialiased">
+	<div id="cookieConsentContainer"></div>
+	
+	<div class="min-h-screen flex flex-col">
+		<header class="sticky top-0 z-20 backdrop-blur-md" style="border-bottom: 1px solid rgb(var(--border-color)); background-color: rgba(var(--bg-primary), 0.9)">
+			<nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
+				<a href="index.html" class="text-sm font-semibold" style="color: rgb(var(--text-primary))">
+					← Back to Portfolio
+				</a>
+				<a href="index.html#projects" class="text-sm" style="color: rgb(var(--text-secondary))">
+					All Projects
+				</a>
+			</nav>
+		</header>
+
+		<main class="flex-1">
+			<article class="px-4 py-12 sm:px-6 lg:px-8">
+				<div class="mx-auto max-w-4xl space-y-12">
+					<!-- Header -->
+					<header class="space-y-6">
+						<div class="flex flex-wrap gap-2">
+							<span class="tag">Docker</span>
+							<span class="tag">Cloud Infrastructure</span>
+							<span class="tag">Web UI</span>
+							<span class="tag">Remote Management</span>
+						</div>
+						<h1 class="text-4xl sm:text-5xl font-bold tracking-tight" style="color: rgb(var(--text-primary))">
+							ArkeyDock: Docker Management Interface
+						</h1>
+						<p class="text-xl leading-relaxed" style="color: rgb(var(--text-secondary))">
+							A web-based interface for managing Docker hosts and containers remotely, exposing Docker Remote APIs through a clean, browser-based dashboard.
+						</p>
+						<div class="flex flex-wrap gap-4 text-sm">
+							<div>
+								<span style="color: rgb(var(--text-tertiary))">Role:</span>
+								<span style="color: rgb(var(--text-primary))">Lead Developer</span>
+							</div>
+							<div>
+								<span style="color: rgb(var(--text-tertiary))">Timeline:</span>
+								<span style="color: rgb(var(--text-primary))">6 months</span>
+							</div>
+							<div>
+								<span style="color: rgb(var(--text-tertiary))">Team Size:</span>
+								<span style="color: rgb(var(--text-primary))">Solo project</span>
+							</div>
+						</div>
+						<!-- <a href="http://kongaraju.in/arkeydock/" target="_blank" rel="noopener noreferrer"
+							class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity"
+							style="background-color: rgb(var(--accent-color)); color: rgb(var(--bg-primary))">
+							View Live Demo →
+						</a> -->
+					</header>
+
+					<!-- Problem Statement -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">The Challenge</h2>
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<p class="text-base leading-relaxed mb-4" style="color: rgb(var(--text-secondary))">
+								Managing Docker containers across multiple remote hosts was cumbersome, requiring SSH access and command-line expertise. Teams needed a unified interface to:
+							</p>
+							<ul class="space-y-2 text-base" style="color: rgb(var(--text-secondary))">
+								<li>• Monitor container status across multiple hosts</li>
+								<li>• Start, stop, and restart containers without SSH</li>
+								<li>• View logs and inspect container details</li>
+								<li>• Manage images and volumes</li>
+								<li>• Provide access to non-technical team members</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Solution -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">The Solution</h2>
+						<p class="text-base leading-relaxed" style="color: rgb(var(--text-secondary))">
+							Built a responsive web application that interfaces with Docker's Remote API, providing a dashboard for container management with real-time updates and intuitive controls.
+						</p>
+						
+						<div class="grid gap-6 sm:grid-cols-2">
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--accent-color))">Key Features</h3>
+								<ul class="space-y-2 text-sm" style="color: rgb(var(--text-secondary))">
+									<li>• Multi-host management</li>
+									<li>• Real-time container monitoring</li>
+									<li>• Log streaming</li>
+									<li>• Container lifecycle controls</li>
+									<li>• Image management</li>
+									<li>• Volume inspection</li>
+									<li>• Network visualization</li>
+								</ul>
+							</div>
+							
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--accent-color))">Tech Stack</h3>
+								<ul class="space-y-2 text-sm" style="color: rgb(var(--text-secondary))">
+									<li>• Frontend: HTML5, CSS3, JavaScript</li>
+									<li>• API: Docker Remote API</li>
+									<li>• Real-time: WebSockets</li>
+									<li>• Architecture: SPA</li>
+									<li>• Security: TLS, token auth</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<!-- Technical Challenges -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Technical Challenges & Solutions</h2>
+						
+						<div class="space-y-4">
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Challenge 1: Real-time Updates</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-tertiary))">
+									Container states change frequently, and polling would be inefficient and create unnecessary load.
+								</p>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">Solution:</strong> Implemented WebSocket connections to Docker's event stream API, providing real-time notifications of container state changes without polling overhead.
+								</p>
+							</div>
+
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Challenge 2: Log Streaming Performance</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-tertiary))">
+									Streaming large log files could overwhelm the browser and impact UI responsiveness.
+								</p>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">Solution:</strong> Implemented virtual scrolling with chunked log loading, displaying only visible log lines and lazy-loading historical data on demand.
+								</p>
+							</div>
+
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Challenge 3: Security & Access Control</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-tertiary))">
+									Exposing Docker API to web interface posed security risks if not properly secured.
+								</p>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">Solution:</strong> Implemented TLS encryption, token-based authentication, and role-based access control (RBAC) to restrict operations based on user permissions.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Results -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Results & Impact</h2>
+						
+						<div class="grid gap-6 sm:grid-cols-3">
+							<div class="rounded-xl p-6 text-center" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<div class="text-3xl font-bold mb-2" style="color: rgb(var(--accent-color))">75%</div>
+								<div class="text-sm" style="color: rgb(var(--text-secondary))">Reduction in deployment time</div>
+							</div>
+							
+							<div class="rounded-xl p-6 text-center" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<div class="text-3xl font-bold mb-2" style="color: rgb(var(--accent-color))">50+</div>
+								<div class="text-sm" style="color: rgb(var(--text-secondary))">Containers managed simultaneously</div>
+							</div>
+							
+							<!-- <div class="rounded-xl p-6 text-center" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<div class="text-3xl font-bold mb-2" style="color: rgb(var(--accent-color))">10+</div>
+								<div class="text-sm" style="color: rgb(var(--text-secondary))">Teams using the platform</div>
+							</div> -->
+						</div>
+
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--text-primary))">Key Outcomes</h3>
+							<ul class="space-y-2 text-base" style="color: rgb(var(--text-secondary))">
+								<li>• Eliminated need for SSH access for routine container operations</li>
+								<li>• Enabled non-technical team members to manage deployments</li>
+								<li>• Reduced mean time to resolution (MTTR) for container issues</li>
+								<li>• Improved visibility into container health and resource usage</li>
+								<li>• Streamlined DevOps workflows across multiple environments</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Lessons Learned -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Lessons Learned</h2>
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<ul class="space-y-3 text-base" style="color: rgb(var(--text-secondary))">
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Real-time is critical:</strong> 
+									For infrastructure management tools, real-time updates aren't a luxury—they're essential for operational confidence.
+								</li>
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Security first:</strong> 
+									When building tools that control production infrastructure, security considerations must be baked in from day one.
+								</li>
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Performance at scale:</strong> 
+									Virtual scrolling and lazy loading are crucial when dealing with large datasets like container logs.
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Navigation -->
+					<footer class="flex justify-between pt-8" style="border-top: 1px solid rgb(var(--border-color))">
+						<a href="index.html" class="text-sm hover:opacity-70 transition-opacity" style="color: rgb(var(--text-secondary))">
+							← Back to Portfolio
+						</a>
+						<a href="case-study-arkeyjs.html" class="text-sm hover:opacity-70 transition-opacity" style="color: rgb(var(--accent-color))">
+							Next: ArkeyJS →
+						</a>
+					</footer>
+				</div>
+			</article>
+		</main>
+
+		<footer style="border-top: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+			<div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-5 text-xs sm:px-6" style="color: rgb(var(--text-tertiary))">
+				<span>© <span id="year"></span> Raju Konga</span>
+				<a href="privacy-policy.html" class="hover:opacity-70 transition-opacity">Privacy Policy</a>
+			</div>
+		</footer>
+	</div>
+
+	<script>
+		fetch('cookie-consent.html')
+			.then(response => response.text())
+			.then(html => {
+				document.getElementById('cookieConsentContainer').innerHTML = html;
+				if (typeof initCookieConsent === 'function') {
+					initCookieConsent();
+				}
+			});
+	</script>
+	<script src="cookie-consent.js"></script>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>

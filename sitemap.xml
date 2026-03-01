@@ -51,5 +51,42 @@
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
+    
+    <!-- Case Studies -->
+    <url>
+        <loc>https://kongaraju.in/case-study-arkeydock.html</loc>
+        <lastmod>2026-03-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kongaraju.in/case-study-arkeyjs.html</loc>
+        <lastmod>2026-03-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://kongaraju.in/case-study-antkorp.html</loc>
+        <lastmod>2026-03-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://kongaraju.in/privacy-policy.html</loc>
+        <lastmod>2026-03-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://kongaraju.in/404.html</loc>
+        <lastmod>2026-03-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
+    </url>
 
 </urlset>

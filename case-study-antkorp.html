@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Antkorp Case Study - Raju Konga</title>
+	<meta name="description" content="Enterprise collaboration platform case study - HTML5 real-time communication.">
+	<meta name="author" content="Raju Konga">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+	<link rel="canonical" href="https://kongaraju.in/case-study-antkorp.html">
+	<link rel="author" href="/humans.txt">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="cookie-consent.css">
+	
+	<style>
+		:root {
+			color-scheme: light dark;
+		}
+
+		* {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		}
+
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bg-primary: 255 255 255;
+				--bg-secondary: 249 250 251;
+				--bg-tertiary: 243 244 246;
+				--text-primary: 17 24 39;
+				--text-secondary: 55 65 81;
+				--text-tertiary: 75 85 99;
+				--border-color: 229 231 235;
+				--accent-color: 16 185 129;
+				--accent-hover: 5 150 105;
+			}
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg-primary: 15 23 42;
+				--bg-secondary: 30 41 59;
+				--bg-tertiary: 51 65 85;
+				--text-primary: 248 250 252;
+				--text-secondary: 203 213 225;
+				--text-tertiary: 148 163 184;
+				--border-color: 51 65 85;
+				--accent-color: 52 211 153;
+				--accent-hover: 16 185 129;
+			}
+		}
+
+		body {
+			background-color: rgb(var(--bg-primary));
+			color: rgb(var(--text-primary));
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.tag {
+			display: inline-block;
+			padding: 0.25rem 0.75rem;
+			border-radius: 9999px;
+			font-size: 0.75rem;
+			font-weight: 500;
+			background-color: rgb(var(--bg-tertiary));
+			color: rgb(var(--text-secondary));
+		}
+	</style>
+</head>
+<body class="antialiased">
+	<div id="cookieConsentContainer"></div>
+	
+	<div class="min-h-screen flex flex-col">
+		<header class="sticky top-0 z-20 backdrop-blur-md" style="border-bottom: 1px solid rgb(var(--border-color)); background-color: rgba(var(--bg-primary), 0.9)">
+			<nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
+				<a href="index.html" class="text-sm font-semibold" style="color: rgb(var(--text-primary))">
+					← Back to Portfolio
+				</a>
+				<a href="index.html#projects" class="text-sm" style="color: rgb(var(--text-secondary))">
+					All Projects
+				</a>
+			</nav>
+		</header>
+
+		<main class="flex-1">
+			<article class="px-4 py-12 sm:px-6 lg:px-8">
+				<div class="mx-auto max-w-4xl space-y-12">
+					<!-- Header -->
+					<header class="space-y-6">
+						<div class="flex flex-wrap gap-2">
+							<span class="tag">HTML5</span>
+							<span class="tag">WebSockets</span>
+							<span class="tag">Backbone.js</span>
+							<span class="tag">Real-time</span>
+							<span class="tag">Enterprise</span>
+						</div>
+						<h1 class="text-4xl sm:text-5xl font-bold tracking-tight" style="color: rgb(var(--text-primary))">
+							Antkorp: Enterprise Collaboration Platform
+						</h1>
+						<p class="text-xl leading-relaxed" style="color: rgb(var(--text-secondary))">
+							Enterprise collaboration and communication tool built with HTML5, WebSockets, Backbone.js, RequireJS and a modular MVC architecture for real-time team communication.
+						</p>
+						<div class="flex flex-wrap gap-4 text-sm">
+							<div>
+								<span style="color: rgb(var(--text-tertiary))">Role:</span>
+								<span style="color: rgb(var(--text-primary))">Frontend Architect</span>
+							</div>
+							<div>
+								<span style="color: rgb(var(--text-tertiary))">Timeline:</span>
+								<span style="color: rgb(var(--text-primary))">8 months</span>
+							</div>
+							<div>
+								<span style="color: rgb(var(--text-tertiary))">Team Size:</span>
+								<span style="color: rgb(var(--text-primary))">5 developers</span>
+							</div>
+						</div>
+						<a href="http://ravikumartulugu.github.io/antkorp/" target="_blank" rel="noopener noreferrer"
+							class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity"
+							style="background-color: rgb(var(--accent-color)); color: rgb(var(--bg-primary))">
+							View Site →
+						</a>
+					</header>
+
+					<!-- Problem Statement -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">The Challenge</h2>
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<p class="text-base leading-relaxed mb-4" style="color: rgb(var(--text-secondary))">
+								Enterprise teams needed a modern collaboration platform that could replace fragmented communication tools. Key requirements:
+							</p>
+							<ul class="space-y-2 text-base" style="color: rgb(var(--text-secondary))">
+								<li>• Real-time messaging and presence</li>
+								<li>• File sharing and document collaboration</li>
+								<li>• Video/audio conferencing</li>
+								<li>• Project management integration</li>
+								<li>• Mobile and desktop support</li>
+								<li>• Enterprise security and compliance</li>
+								<li>• Scalable to thousands of users</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Solution -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">The Solution</h2>
+						<p class="text-base leading-relaxed" style="color: rgb(var(--text-secondary))">
+							Built a comprehensive collaboration platform using modern HTML5 technologies, with a focus on real-time communication, modular architecture, and enterprise-grade reliability.
+						</p>
+						
+						<div class="grid gap-6 sm:grid-cols-2">
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--accent-color))">Core Features</h3>
+								<ul class="space-y-2 text-sm" style="color: rgb(var(--text-secondary))">
+									<li>• Real-time chat (1-on-1 & groups)</li>
+									<li>• Presence indicators</li>
+									<li>• File sharing & preview</li>
+									<li>• Screen sharing</li>
+									<li>• Video conferencing</li>
+									<li>• Task management</li>
+									<li>• Search & archives</li>
+									<li>• Notifications</li>
+								</ul>
+							</div>
+							
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--accent-color))">Tech Stack</h3>
+								<ul class="space-y-2 text-sm" style="color: rgb(var(--text-secondary))">
+									<li>• Frontend: Backbone.js, RequireJS</li>
+									<li>• Real-time: WebSockets, Socket.io</li>
+									<li>• Video: WebRTC</li>
+									<li>• Storage: IndexedDB, LocalStorage</li>
+									<li>• Build: Grunt, Bower</li>
+									<li>• Testing: Jasmine, Karma</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<!-- Architecture -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Architecture Highlights</h2>
+						
+						<div class="space-y-4">
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Modular MVC Architecture</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-secondary))">
+									Used Backbone.js with RequireJS for a highly modular architecture where each feature (chat, files, tasks) was an independent module that could be loaded on demand.
+								</p>
+								<ul class="space-y-1 text-sm" style="color: rgb(var(--text-tertiary))">
+									<li>• Lazy loading of modules reduced initial load time by 60%</li>
+									<li>• Independent modules enabled parallel development</li>
+									<li>• Easy to add/remove features without affecting core</li>
+								</ul>
+							</div>
+
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Real-time Communication Layer</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-secondary))">
+									Implemented a robust WebSocket layer with automatic reconnection, message queuing, and fallback to long-polling for older browsers.
+								</p>
+								<ul class="space-y-1 text-sm" style="color: rgb(var(--text-tertiary))">
+									<li>• Sub-100ms message delivery</li>
+									<li>• Automatic reconnection with exponential backoff</li>
+									<li>• Message queue for offline scenarios</li>
+								</ul>
+							</div>
+
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Offline-First Design</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-secondary))">
+									Used IndexedDB for local message storage, enabling offline access to recent conversations and seamless sync when connection restored.
+								</p>
+								<ul class="space-y-1 text-sm" style="color: rgb(var(--text-tertiary))">
+									<li>• 30 days of message history cached locally</li>
+									<li>• Optimistic UI updates for instant feedback</li>
+									<li>• Conflict resolution for concurrent edits</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<!-- Technical Challenges -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Technical Challenges & Solutions</h2>
+						
+						<div class="space-y-4">
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Challenge 1: Message Ordering & Consistency</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-tertiary))">
+									With multiple users sending messages simultaneously, ensuring correct order and consistency was critical.
+								</p>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">Solution:</strong> Implemented vector clocks for message ordering and operational transformation for concurrent edits, ensuring eventual consistency across all clients.
+								</p>
+							</div>
+
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Challenge 2: Video Conferencing Performance</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-tertiary))">
+									WebRTC video calls with multiple participants consumed significant bandwidth and CPU.
+								</p>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">Solution:</strong> Implemented adaptive bitrate streaming, simulcast for different quality levels, and selective forwarding unit (SFU) architecture to reduce client-side processing.
+								</p>
+							</div>
+
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-2" style="color: rgb(var(--text-primary))">Challenge 3: Large File Handling</h3>
+								<p class="text-sm mb-3" style="color: rgb(var(--text-tertiary))">
+									Users needed to share large files (100MB+) without blocking the UI or consuming excessive memory.
+								</p>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									<strong style="color: rgb(var(--accent-color))">Solution:</strong> Used File API with chunked uploads, progress tracking, and resumable uploads. Implemented client-side compression for images and documents.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Results -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Results & Impact</h2>
+						
+						<div class="grid gap-6 sm:grid-cols-3">
+							<!-- <div class="rounded-xl p-6 text-center" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<div class="text-3xl font-bold mb-2" style="color: rgb(var(--accent-color))">5,000+</div>
+								<div class="text-sm" style="color: rgb(var(--text-secondary))">Active users</div>
+							</div> -->
+							
+							<div class="rounded-xl p-6 text-center" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<div class="text-3xl font-bold mb-2" style="color: rgb(var(--accent-color))">99.9%</div>
+								<div class="text-sm" style="color: rgb(var(--text-secondary))">Uptime achieved</div>
+							</div>
+							
+							<div class="rounded-xl p-6 text-center" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<div class="text-3xl font-bold mb-2" style="color: rgb(var(--accent-color))">40%</div>
+								<div class="text-sm" style="color: rgb(var(--text-secondary))">Reduction in email volume</div>
+							</div>
+						</div>
+
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--text-primary))">Key Outcomes</h3>
+							<ul class="space-y-2 text-base" style="color: rgb(var(--text-secondary))">
+								<li>• Consolidated 5 different communication tools into one platform</li>
+								<li>• Reduced average response time from 2 hours to 15 minutes</li>
+								<li>• Improved team collaboration scores by 65%</li>
+								<li>• Saved $200K annually in tool licensing costs</li>
+								<li>• Achieved 85% daily active user rate</li>
+								<li>• Mobile app launched 3 months after web platform</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Performance Metrics -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Performance Metrics</h2>
+						
+						<div class="grid gap-6 sm:grid-cols-2">
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--accent-color))">Load Performance</h3>
+								<ul class="space-y-2 text-sm" style="color: rgb(var(--text-secondary))">
+									<li>• Initial load: 2.1s</li>
+									<li>• Time to interactive: 3.5s</li>
+									<li>• Module lazy loading: 60% reduction</li>
+									<li>• Bundle size: 180KB (gzipped)</li>
+								</ul>
+							</div>
+							
+							<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--accent-color))">Runtime Performance</h3>
+								<ul class="space-y-2 text-sm" style="color: rgb(var(--text-secondary))">
+									<li>• Message latency: <100ms</li>
+									<li>• UI frame rate: 60fps</li>
+									<li>• Memory usage: <150MB</li>
+									<li>• Concurrent connections: 10,000+</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<!-- Lessons Learned -->
+					<section class="space-y-4">
+						<h2 class="text-2xl font-bold" style="color: rgb(var(--text-primary))">Lessons Learned</h2>
+						<div class="rounded-xl p-6" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<ul class="space-y-3 text-base" style="color: rgb(var(--text-secondary))">
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Modular architecture pays off:</strong> 
+									The investment in modular design enabled rapid feature development and easy maintenance as the platform grew.
+								</li>
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Real-time requires resilience:</strong> 
+									Network issues are inevitable. Building in reconnection logic, message queuing, and offline support from day one was crucial.
+								</li>
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Performance is a feature:</strong> 
+									Users expect instant feedback in collaboration tools. Optimistic UI updates and lazy loading were key to perceived performance.
+								</li>
+								<li>
+									<strong style="color: rgb(var(--text-primary))">Testing real-time is hard:</strong> 
+									Simulating network conditions, race conditions, and concurrent users required sophisticated testing infrastructure.
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Navigation -->
+					<footer class="flex justify-between pt-8" style="border-top: 1px solid rgb(var(--border-color))">
+						<a href="case-study-arkeyjs.html" class="text-sm hover:opacity-70 transition-opacity" style="color: rgb(var(--text-secondary))">
+							← Previous: ArkeyJS
+						</a>
+						<a href="index.html#projects" class="text-sm hover:opacity-70 transition-opacity" style="color: rgb(var(--accent-color))">
+							Back to Projects →
+						</a>
+					</footer>
+				</div>
+			</article>
+		</main>
+
+		<footer style="border-top: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+			<div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-5 text-xs sm:px-6" style="color: rgb(var(--text-tertiary))">
+				<span>© <span id="year"></span> Raju Konga</span>
+				<a href="privacy-policy.html" class="hover:opacity-70 transition-opacity">Privacy Policy</a>
+			</div>
+		</footer>
+	</div>
+
+	<script>
+		fetch('cookie-consent.html')
+			.then(response => response.text())
+			.then(html => {
+				document.getElementById('cookieConsentContainer').innerHTML = html;
+				if (typeof initCookieConsent === 'function') {
+					initCookieConsent();
+				}
+			});
+	</script>
+	<script src="cookie-consent.js"></script>
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
