@@ -1,0 +1,120 @@
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent" style="display: none;">
+	<div class="cookie-consent-content">
+		<div class="cookie-consent-text">
+			<h3>🍪 We use cookies</h3>
+			<p>
+				We use cookies to enhance your browsing experience, analyze site traffic, and understand where our visitors are coming from. 
+				By clicking "Accept All", you consent to our use of cookies.
+			</p>
+		</div>
+		<div class="cookie-consent-actions">
+			<button id="cookieAcceptAll" class="cookie-btn cookie-btn-primary" aria-label="Accept all cookies">
+				Accept All
+			</button>
+			<button id="cookieReject" class="cookie-btn cookie-btn-secondary" aria-label="Reject non-essential cookies">
+				Reject Non-Essential
+			</button>
+			<button id="cookieCustomize" class="cookie-btn cookie-btn-link" aria-label="Customize cookie preferences">
+				Customize
+			</button>
+		</div>
+	</div>
+</div>
+
+<!-- Cookie Preferences Modal -->
+<div id="cookiePreferences" class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookiePreferencesTitle" style="display: none;">
+	<div class="cookie-modal-overlay" id="cookieModalOverlay"></div>
+	<div class="cookie-modal-content">
+		<div class="cookie-modal-header">
+			<h2 id="cookiePreferencesTitle">Cookie Preferences</h2>
+			<button id="cookieModalClose" class="cookie-modal-close" aria-label="Close preferences">×</button>
+		</div>
+		<div class="cookie-modal-body">
+			<p class="cookie-modal-description">
+				We use cookies to improve your experience on our site. You can choose which types of cookies to allow.
+			</p>
+			
+			<!-- Essential Cookies -->
+			<div class="cookie-category">
+				<div class="cookie-category-header">
+					<div class="cookie-category-info">
+						<h3>Essential Cookies</h3>
+						<span class="cookie-badge cookie-badge-required">Always Active</span>
+					</div>
+					<label class="cookie-switch">
+						<input type="checkbox" checked disabled aria-label="Essential cookies always active">
+						<span class="cookie-slider"></span>
+					</label>
+				</div>
+				<p class="cookie-category-description">
+					These cookies are necessary for the website to function and cannot be disabled. They are usually set in response to actions you take, such as setting your privacy preferences or filling in forms.
+				</p>
+			</div>
+			
+			<!-- Analytics Cookies -->
+			<div class="cookie-category">
+				<div class="cookie-category-header">
+					<div class="cookie-category-info">
+						<h3>Analytics Cookies</h3>
+						<span class="cookie-badge">Optional</span>
+					</div>
+					<label class="cookie-switch">
+						<input type="checkbox" id="analyticsToggle" aria-label="Toggle analytics cookies">
+						<span class="cookie-slider"></span>
+					</label>
+				</div>
+				<p class="cookie-category-description">
+					These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. We use Google Analytics for this purpose.
+				</p>
+				<details class="cookie-details">
+					<summary>View cookies</summary>
+					<ul>
+						<li><strong>_ga:</strong> Used to distinguish users (expires in 2 years)</li>
+						<li><strong>_gid:</strong> Used to distinguish users (expires in 24 hours)</li>
+						<li><strong>_gat:</strong> Used to throttle request rate (expires in 1 minute)</li>
+					</ul>
+				</details>
+			</div>
+			
+			<!-- Preference Cookies -->
+			<div class="cookie-category">
+				<div class="cookie-category-header">
+					<div class="cookie-category-info">
+						<h3>Preference Cookies</h3>
+						<span class="cookie-badge">Optional</span>
+					</div>
+					<label class="cookie-switch">
+						<input type="checkbox" id="preferenceToggle" checked aria-label="Toggle preference cookies">
+						<span class="cookie-slider"></span>
+					</label>
+				</div>
+				<p class="cookie-category-description">
+					These cookies allow the website to remember choices you make (such as your theme preference) and provide enhanced, more personal features.
+				</p>
+				<details class="cookie-details">
+					<summary>View cookies</summary>
+					<ul>
+						<li><strong>theme:</strong> Stores your light/dark mode preference</li>
+					</ul>
+				</details>
+			</div>
+		</div>
+		<div class="cookie-modal-footer">
+			<button id="cookieSavePreferences" class="cookie-btn cookie-btn-primary">
+				Save Preferences
+			</button>
+			<button id="cookieAcceptAllModal" class="cookie-btn cookie-btn-secondary">
+				Accept All
+			</button>
+		</div>
+		<div class="cookie-modal-links">
+			<a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+		</div>
+	</div>
+</div>
+
+<!-- Cookie Settings Button (Fixed) -->
+<button id="cookieSettingsBtn" class="cookie-settings-btn" aria-label="Cookie settings" title="Cookie Settings" style="display: none;">
+	🍪
+</button>

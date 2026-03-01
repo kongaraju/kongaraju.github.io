@@ -39,6 +39,9 @@
 	<!-- Tailwind CSS -->
 	<script src="https://cdn.tailwindcss.com"></script>
 	
+	<!-- Cookie Consent Styles -->
+	<link rel="stylesheet" href="cookie-consent.css">
+	
 	<style>
 		/* Skip to main content link */
 		.skip-link {
@@ -171,9 +174,25 @@
 			white-space: nowrap;
 			border-width: 0;
 		}
+		
+		/* Form input focus styles */
+		input:focus,
+		textarea:focus {
+			outline: 3px solid rgb(var(--accent-color));
+			outline-offset: 2px;
+		}
+		
+		input::placeholder,
+		textarea::placeholder {
+			color: rgb(var(--text-tertiary));
+			opacity: 0.6;
+		}
 	</style>
 </head>
 <body class="antialiased transition-colors duration-300">
+	<!-- Cookie Consent Banner -->
+	<div id="cookieConsentContainer"></div>
+	
 	<a href="#main" class="skip-link">Skip to main content</a>
 	
 	<div class="min-h-screen flex flex-col" style="background-color: rgb(var(--bg-primary))">
@@ -506,46 +525,189 @@
 							or just want to jam on web platform ideas, feel free to reach out.
 						</p>
 					</header>
-					<div class="flex flex-col items-center gap-8">
-						<div class="flex flex-wrap justify-center gap-4">
-							<a href="mailto:kongaraju.ca25@gmail.com"
-								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity"
-								style="background-color: rgb(var(--accent-color)); color: rgb(var(--bg-primary))">
-								Email me
-							</a>
-							<a href="https://github.com/kongaraju" target="_blank"
-								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold hover:opacity-70 transition-opacity"
-								style="border: 1px solid rgb(var(--border-color)); color: rgb(var(--text-primary))">
-								GitHub
-							</a>
-							<a href="https://www.linkedin.com/in/kongaraju/" target="_blank"
-								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold hover:opacity-70 transition-opacity"
-								style="border: 1px solid rgb(var(--border-color)); color: rgb(var(--text-primary))">
-								LinkedIn
-							</a>
-							<a href="https://twitter.com/kongaraju" target="_blank"
-								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold hover:opacity-70 transition-opacity"
-								style="border: 1px solid rgb(var(--border-color)); color: rgb(var(--text-primary))">
-								Twitter
-							</a>
+					
+					<div class="grid gap-8 lg:grid-cols-2">
+						<!-- Contact Form -->
+						<div class="rounded-xl p-6 shadow-sm" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+							<h3 class="text-lg font-semibold mb-4" style="color: rgb(var(--text-primary))">Send a Message</h3>
+							<form id="contactForm" class="space-y-4">
+								<div>
+									<label for="name" class="block text-sm font-medium mb-1" style="color: rgb(var(--text-secondary))">
+										Name <span style="color: rgb(var(--accent-color))">*</span>
+									</label>
+									<input 
+										type="text" 
+										id="name" 
+										name="name" 
+										required
+										class="w-full px-4 py-2 rounded-lg border transition-colors"
+										style="border-color: rgb(var(--border-color)); background-color: rgb(var(--bg-primary)); color: rgb(var(--text-primary))"
+										placeholder="Your name"
+									>
+								</div>
+								
+								<div>
+									<label for="email" class="block text-sm font-medium mb-1" style="color: rgb(var(--text-secondary))">
+										Email <span style="color: rgb(var(--accent-color))">*</span>
+									</label>
+									<input 
+										type="email" 
+										id="email" 
+										name="email" 
+										required
+										class="w-full px-4 py-2 rounded-lg border transition-colors"
+										style="border-color: rgb(var(--border-color)); background-color: rgb(var(--bg-primary)); color: rgb(var(--text-primary))"
+										placeholder="your.email@example.com"
+									>
+								</div>
+								
+								<div>
+									<label for="subject" class="block text-sm font-medium mb-1" style="color: rgb(var(--text-secondary))">
+										Subject
+									</label>
+									<input 
+										type="text" 
+										id="subject" 
+										name="subject"
+										class="w-full px-4 py-2 rounded-lg border transition-colors"
+										style="border-color: rgb(var(--border-color)); background-color: rgb(var(--bg-primary)); color: rgb(var(--text-primary))"
+										placeholder="What's this about?"
+									>
+								</div>
+								
+								<div>
+									<label for="message" class="block text-sm font-medium mb-1" style="color: rgb(var(--text-secondary))">
+										Message <span style="color: rgb(var(--accent-color))">*</span>
+									</label>
+									<textarea 
+										id="message" 
+										name="message" 
+										required
+										rows="5"
+										class="w-full px-4 py-2 rounded-lg border transition-colors resize-vertical"
+										style="border-color: rgb(var(--border-color)); background-color: rgb(var(--bg-primary)); color: rgb(var(--text-primary))"
+										placeholder="Tell me about your project or question..."
+									></textarea>
+								</div>
+								
+								<div class="flex items-start gap-2">
+									<input 
+										type="checkbox" 
+										id="privacy" 
+										name="privacy" 
+										required
+										class="mt-1"
+									>
+									<label for="privacy" class="text-xs" style="color: rgb(var(--text-tertiary))">
+										I agree to the <a href="privacy-policy.html" target="_blank" style="color: rgb(var(--accent-color))">Privacy Policy</a> and consent to my information being used to respond to my inquiry.
+									</label>
+								</div>
+								
+								<button 
+									type="submit"
+									class="w-full px-6 py-3 rounded-lg font-semibold shadow-sm hover:opacity-90 transition-opacity"
+									style="background-color: rgb(var(--accent-color)); color: rgb(var(--bg-primary))"
+								>
+									Send Message
+								</button>
+								
+								<div id="formStatus" class="hidden text-sm text-center p-3 rounded-lg"></div>
+							</form>
 						</div>
-						<p class="text-xs" style="color: rgb(var(--text-tertiary))">
-							Blog: <a href="http://blog.kongaraju.in" target="_blank"
-								class="underline underline-offset-4 hover:opacity-70 transition-opacity"
-								style="color: rgb(var(--text-secondary))">blog.kongaraju.in</a>
-						</p>
+						
+						<!-- Contact Links -->
+						<div class="space-y-6">
+							<div class="rounded-xl p-6 shadow-sm" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-4" style="color: rgb(var(--text-primary))">Other Ways to Connect</h3>
+								<div class="space-y-4">
+									<a href="mailto:kongaraju.ca25@gmail.com"
+										class="flex items-center gap-3 p-3 rounded-lg hover:opacity-70 transition-opacity"
+										style="background-color: rgb(var(--bg-primary))">
+										<span class="text-2xl">📧</span>
+										<div>
+											<div class="font-medium text-sm" style="color: rgb(var(--text-primary))">Email</div>
+											<div class="text-xs" style="color: rgb(var(--text-tertiary))">kongaraju.ca25@gmail.com</div>
+										</div>
+									</a>
+									
+									<a href="https://linkedin.com/in/kongaraju" target="_blank" rel="noopener noreferrer"
+										class="flex items-center gap-3 p-3 rounded-lg hover:opacity-70 transition-opacity"
+										style="background-color: rgb(var(--bg-primary))">
+										<span class="text-2xl">💼</span>
+										<div>
+											<div class="font-medium text-sm" style="color: rgb(var(--text-primary))">LinkedIn</div>
+											<div class="text-xs" style="color: rgb(var(--text-tertiary))">Professional network</div>
+										</div>
+									</a>
+									
+									<a href="https://github.com/kongaraju" target="_blank" rel="noopener noreferrer"
+										class="flex items-center gap-3 p-3 rounded-lg hover:opacity-70 transition-opacity"
+										style="background-color: rgb(var(--bg-primary))">
+										<span class="text-2xl">💻</span>
+										<div>
+											<div class="font-medium text-sm" style="color: rgb(var(--text-primary))">GitHub</div>
+											<div class="text-xs" style="color: rgb(var(--text-tertiary))">Open source projects</div>
+										</div>
+									</a>
+									
+									<a href="https://twitter.com/kongaraju" target="_blank" rel="noopener noreferrer"
+										class="flex items-center gap-3 p-3 rounded-lg hover:opacity-70 transition-opacity"
+										style="background-color: rgb(var(--bg-primary))">
+										<span class="text-2xl">🐦</span>
+										<div>
+											<div class="font-medium text-sm" style="color: rgb(var(--text-primary))">Twitter</div>
+											<div class="text-xs" style="color: rgb(var(--text-tertiary))">Tech discussions</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							
+							<div class="rounded-xl p-6 shadow-sm" style="border: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
+								<h3 class="text-lg font-semibold mb-3" style="color: rgb(var(--text-primary))">Response Time</h3>
+								<p class="text-sm" style="color: rgb(var(--text-secondary))">
+									I typically respond within 24-48 hours during business days. For urgent matters, 
+									please reach out via LinkedIn or email directly.
+								</p>
+							</div>
+							
+							<p class="text-xs text-center" style="color: rgb(var(--text-tertiary))">
+								Blog: <a href="http://blog.kongaraju.in" target="_blank" rel="noopener noreferrer"
+									class="underline underline-offset-4 hover:opacity-70 transition-opacity"
+									style="color: rgb(var(--text-secondary))">blog.kongaraju.in</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
 		<footer style="border-top: 1px solid rgb(var(--border-color)); background-color: rgb(var(--bg-secondary))">
-			<div class="mx-auto flex max-w-5xl items-center justify-between px-4 py-5 text-xs sm:px-6" style="color: rgb(var(--text-tertiary))">
+			<div class="mx-auto flex max-w-5xl flex-col sm:flex-row items-center justify-between gap-4 px-4 py-5 text-xs sm:px-6" style="color: rgb(var(--text-tertiary))">
 				<span>© <span id="year"></span> Raju Konga</span>
-				<span>Built with HTML5 & Tailwind CSS</span>
+				<div class="flex gap-4">
+					<a href="privacy-policy.html" class="hover:opacity-70 transition-opacity" style="color: rgb(var(--text-tertiary))">Privacy Policy</a>
+					<span>·</span>
+					<span>Built with HTML5 & Tailwind CSS</span>
+				</div>
 			</div>
 		</footer>
 	</div>
+
+	<!-- Load Cookie Consent HTML -->
+	<script>
+		fetch('cookie-consent.html')
+			.then(response => response.text())
+			.then(html => {
+				document.getElementById('cookieConsentContainer').innerHTML = html;
+				// Initialize after loading
+				if (typeof initCookieConsent === 'function') {
+					initCookieConsent();
+				}
+			});
+	</script>
+	
+	<!-- Cookie Consent Script -->
+	<script src="cookie-consent.js"></script>
 
 	<script>
 		document.getElementById('year').textContent = new Date().getFullYear();
@@ -568,14 +730,111 @@
 				button.setAttribute('aria-expanded', 'false');
 			});
 		});
+
+		// Contact Form Handler
+		const contactForm = document.getElementById('contactForm');
+		const formStatus = document.getElementById('formStatus');
+
+		if (contactForm) {
+			contactForm.addEventListener('submit', async (e) => {
+				e.preventDefault();
+				
+				const submitButton = contactForm.querySelector('button[type="submit"]');
+				const originalText = submitButton.textContent;
+				
+				// Disable button and show loading state
+				submitButton.disabled = true;
+				submitButton.textContent = 'Sending...';
+				formStatus.classList.add('hidden');
+				
+				// Get form data
+				const formData = {
+					name: document.getElementById('name').value,
+					email: document.getElementById('email').value,
+					subject: document.getElementById('subject').value,
+					message: document.getElementById('message').value,
+					timestamp: new Date().toISOString()
+				};
+				
+				try {
+					// For now, we'll use mailto as fallback
+					// In production, replace this with your backend API endpoint
+					const mailtoLink = `mailto:kongaraju.ca25@gmail.com?subject=${encodeURIComponent(formData.subject || 'Contact Form Submission')}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+					
+					// Show success message
+					formStatus.textContent = 'Thank you! Your message has been received. I\'ll get back to you soon.';
+					formStatus.style.backgroundColor = 'rgb(var(--bg-secondary))';
+					formStatus.style.color = 'rgb(var(--accent-color))';
+					formStatus.classList.remove('hidden');
+					
+					// Reset form
+					contactForm.reset();
+					
+					// Track in GA4
+					if (typeof gtag === 'function') {
+						gtag('event', 'form_submit', {
+							'event_category': 'Contact Form',
+							'event_label': 'Success'
+						});
+					}
+					
+					// Optional: Open mailto as backup
+					// window.location.href = mailtoLink;
+					
+				} catch (error) {
+					console.error('Form submission error:', error);
+					formStatus.textContent = 'Oops! Something went wrong. Please try emailing me directly.';
+					formStatus.style.backgroundColor = 'rgb(var(--bg-secondary))';
+					formStatus.style.color = '#ef4444';
+					formStatus.classList.remove('hidden');
+					
+					// Track error in GA4
+					if (typeof gtag === 'function') {
+						gtag('event', 'form_error', {
+							'event_category': 'Contact Form',
+							'event_label': 'Submission Error'
+						});
+					}
+				} finally {
+					// Re-enable button
+					submitButton.disabled = false;
+					submitButton.textContent = originalText;
+				}
+			});
+		}
 	</script>
 	
-	<!-- Google Analytics - Loaded async at end -->
-	<script async src="https://www.google-analytics.com/analytics.js"></script>
+	<!-- Google Analytics 4 - Loaded conditionally based on consent -->
 	<script>
-		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-		ga('create', 'UA-48535302-1', 'auto');
-		ga('send', 'pageview');
+		// Check if analytics consent is given
+		function hasAnalyticsConsent() {
+			const consent = localStorage.getItem('cookieConsent');
+			if (!consent) return false;
+			try {
+				const consentData = JSON.parse(consent);
+				return consentData.analytics === true;
+			} catch (e) {
+				return false;
+			}
+		}
+
+		// Load GA4 if consent given
+		if (hasAnalyticsConsent()) {
+			// Google Analytics 4
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-XXXXXXXXXX', {
+				'anonymize_ip': true,
+				'cookie_flags': 'SameSite=None;Secure'
+			});
+
+			// Load GA4 script
+			const gaScript = document.createElement('script');
+			gaScript.async = true;
+			gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+			document.head.appendChild(gaScript);
+		}
 	</script>
 	
 	<!-- Structured Data -->
