@@ -283,15 +283,71 @@
 			body {
 				background: white;
 				padding: 0;
+				color: black;
 			}
 			
 			.container {
 				box-shadow: none;
 				max-width: 100%;
+				background: white;
 			}
 			
 			.no-print {
-				display: none;
+				display: none !important;
+				visibility: hidden !important;
+				opacity: 0 !important;
+				position: absolute !important;
+				left: -9999px !important;
+			}
+			
+			.back-link {
+				display: none !important;
+				visibility: hidden !important;
+			}
+			
+			.action-buttons {
+				display: none !important;
+				visibility: hidden !important;
+				opacity: 0 !important;
+				position: absolute !important;
+				left: -9999px !important;
+			}
+			
+			.action-button {
+				display: none !important;
+				visibility: hidden !important;
+			}
+			
+			/* Hide any fixed or absolute positioned elements */
+			*[style*="position: fixed"],
+			*[style*="position: absolute"] {
+				position: static !important;
+			}
+			
+			/* Ensure good print colors */
+			* {
+				color: black !important;
+				background: white !important;
+			}
+			
+			/* Keep accent colors for headings */
+			h1, h2, h3, .section-title {
+				color: #10b981 !important;
+			}
+			
+			/* Avoid page breaks inside sections */
+			.section {
+				page-break-inside: avoid;
+			}
+			
+			.item {
+				page-break-inside: avoid;
+			}
+			
+			/* Ensure links are visible */
+			a {
+				text-decoration: underline;
+				color: #10b981 !important;
 			}
 		}
 
@@ -356,6 +412,33 @@
 			background-color: rgb(var(--bg-primary));
 			color: rgb(var(--text-primary));
 			border: 1px solid rgb(var(--border-color));
+		}
+		
+		/* CRITICAL: Print styles - must be last to override everything */
+		@media print {
+			/* Nuclear option - hide these elements completely */
+			div.action-buttons,
+			.action-buttons,
+			.no-print,
+			a.back-link,
+			.back-link {
+				display: none !important;
+				visibility: hidden !important;
+				opacity: 0 !important;
+				height: 0 !important;
+				width: 0 !important;
+				overflow: hidden !important;
+				position: absolute !important;
+				left: -99999px !important;
+				top: -99999px !important;
+			}
+			
+			/* Hide all buttons */
+			button,
+			.action-button {
+				display: none !important;
+				visibility: hidden !important;
+			}
 		}
 	</style>
 </head>
@@ -541,8 +624,8 @@
 	</div>
 
 	<div class="action-buttons no-print">
-		<a href="index.html" class="action-button secondary" aria-label="Back to portfolio">← Portfolio</a>
-		<button class="action-button" onclick="window.print()" aria-label="Print resume or save as PDF">📄 Print / PDF</button>
+		<a href="index.html" class="action-button secondary no-print" aria-label="Back to portfolio">← Portfolio</a>
+		<button class="action-button no-print" onclick="window.print()" aria-label="Print resume or save as PDF">📄 Print / PDF</button>
 	</div>
 	
 	<!-- Structured Data -->
