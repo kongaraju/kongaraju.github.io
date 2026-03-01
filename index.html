@@ -57,10 +57,10 @@
 	
 	<!-- Favicons -->
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
-	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-	<link rel="manifest" href="/img/site.webmanifest">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/icons/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icons/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-touch-icon.png">
+	<link rel="manifest" href="/manifest.json">
 
 	<!-- Modern fonts from Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,7 +71,7 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	
 	<!-- Cookie Consent Styles -->
-	<link rel="stylesheet" href="cookie-consent.css">
+	<link rel="stylesheet" href="assets/css/cookie-consent.css">
 	
 	<!-- PWA Manifest -->
 	<link rel="manifest" href="/manifest.json">
@@ -254,7 +254,7 @@
 					<li><a href="#experiments" class="hover:opacity-70 transition-opacity">Experiments</a></li>
 					<li><a href="#talks" class="hover:opacity-70 transition-opacity">Talks</a></li>
 					<li><a href="#contact" class="hover:opacity-70 transition-opacity">Contact</a></li>
-					<li><a href="resume.html" class="hover:opacity-70 transition-opacity" style="color: rgb(var(--accent-color))">Resume</a></li>
+					<li><a href="pages/resume.html" class="hover:opacity-70 transition-opacity" style="color: rgb(var(--accent-color))">Resume</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -280,7 +280,7 @@
 							and leveraging AI-driven development to scale impact.
 						</p>
 						<div class="flex flex-wrap gap-3 pt-4">
-							<a href="resume.html"
+							<a href="pages/resume.html"
 								class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold shadow-sm hover:opacity-90 transition-opacity"
 								style="background-color: rgb(var(--accent-color)); color: rgb(var(--bg-primary))">
 								View resume
@@ -349,7 +349,7 @@
 								Remote APIs through a clean, browser‑based dashboard.
 							</p>
 							<div class="mt-4 flex flex-wrap gap-3 text-sm font-semibold">
-								<a href="case-study-arkeydock.html"
+								<a href="pages/case-studies/arkeydock.html"
 									class="hover:opacity-70 transition-opacity"
 									style="color: rgb(var(--accent-color))">
 									Case study →
@@ -374,7 +374,7 @@
 								Backbone, RequireJS and a modular MVC architecture.
 							</p>
 							<div class="mt-4 flex flex-wrap gap-3 text-sm font-semibold">
-								<a href="case-study-antkorp.html"
+								<a href="pages/case-studies/antkorp.html"
 									class="hover:opacity-70 transition-opacity"
 									style="color: rgb(var(--accent-color))">
 									Case study →
@@ -399,7 +399,7 @@
 								components to run consistently across browsers.
 							</p>
 							<div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold">
-								<a href="case-study-arkeyjs.html"
+								<a href="pages/case-studies/arkeyjs.html"
 									class="hover:opacity-70 transition-opacity"
 									style="color: rgb(var(--accent-color))">Case study →</a>
 								<a href="http://kongaraju.in/arkeyjs/" target="_blank" rel="noopener noreferrer"
@@ -660,7 +660,7 @@
 										class="mt-1"
 									>
 									<label for="privacy" class="text-xs" style="color: rgb(var(--text-tertiary))">
-										I agree to the <a href="privacy-policy.html" target="_blank" style="color: rgb(var(--accent-color))">Privacy Policy</a> and consent to my information being used to respond to my inquiry.
+										I agree to the <a href="pages/privacy-policy.html" target="_blank" style="color: rgb(var(--accent-color))">Privacy Policy</a> and consent to my information being used to respond to my inquiry.
 									</label>
 								</div>
 								
@@ -746,7 +746,7 @@
 			<div class="mx-auto flex max-w-5xl flex-col sm:flex-row items-center justify-between gap-4 px-4 py-5 text-xs sm:px-6" style="color: rgb(var(--text-tertiary))">
 				<span>© <span id="year"></span> Raju Konga</span>
 				<div class="flex gap-4">
-					<a href="privacy-policy.html" class="hover:opacity-70 transition-opacity" style="color: rgb(var(--text-tertiary))">Privacy Policy</a>
+					<a href="pages/privacy-policy.html" class="hover:opacity-70 transition-opacity" style="color: rgb(var(--text-tertiary))">Privacy Policy</a>
 					<span>·</span>
 					<span>Built with HTML5 & Tailwind CSS</span>
 				</div>
@@ -756,7 +756,7 @@
 
 	<!-- Load Cookie Consent HTML -->
 	<script>
-		fetch('cookie-consent.html')
+		fetch('components/cookie-consent.html')
 			.then(response => response.text())
 			.then(html => {
 				document.getElementById('cookieConsentContainer').innerHTML = html;
@@ -768,7 +768,7 @@
 	</script>
 	
 	<!-- Cookie Consent Script -->
-	<script src="cookie-consent.js"></script>
+	<script src="assets/js/cookie-consent.js"></script>
 
 	<script>
 		document.getElementById('year').textContent = new Date().getFullYear();
@@ -919,9 +919,9 @@
 	</script>
 	
 	<!-- PWA Installation Script -->
-	<script src="pwa-install.js"></script>
+	<script src="assets/js/pwa-install.js"></script>
 	
 	<!-- Performance Optimization Script -->
-	<script src="performance.js"></script>
+	<script src="assets/js/performance.js"></script>
 </body>
 </html>

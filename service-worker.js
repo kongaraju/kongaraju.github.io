@@ -11,15 +11,17 @@ const CACHE_NAME = `raju-konga-portfolio-${CACHE_VERSION}`;
 const PRECACHE_ASSETS = [
     '/',
     '/index.html',
-    '/resume.html',
-    '/case-study-arkeydock.html',
-    '/case-study-arkeyjs.html',
-    '/case-study-antkorp.html',
-    '/privacy-policy.html',
+    '/pages/resume.html',
+    '/pages/case-studies/arkeydock.html',
+    '/pages/case-studies/arkeyjs.html',
+    '/pages/case-studies/antkorp.html',
+    '/pages/privacy-policy.html',
     '/404.html',
-    '/cookie-consent.html',
-    '/cookie-consent.css',
-    '/cookie-consent.js',
+    '/components/cookie-consent.html',
+    '/assets/css/cookie-consent.css',
+    '/assets/js/cookie-consent.js',
+    '/assets/js/performance.js',
+    '/assets/js/pwa-install.js',
     '/manifest.json',
     '/favicon.ico'
 ];
@@ -318,8 +320,8 @@ async function syncContactForm() {
 self.addEventListener('push', (event) => {
     const options = {
         body: event.data ? event.data.text() : 'New update available',
-        icon: '/img/icon-192x192.png',
-        badge: '/img/icon-96x96.png',
+        icon: '/assets/img/icons/android-chrome-192x192.png',
+        badge: '/assets/img/icons/favicon-32x32.png',
         vibrate: [200, 100, 200],
         data: {
             dateOfArrival: Date.now(),
@@ -329,12 +331,12 @@ self.addEventListener('push', (event) => {
             {
                 action: 'explore',
                 title: 'View',
-                icon: '/img/icon-96x96.png'
+                icon: '/assets/img/icons/favicon-32x32.png'
             },
             {
                 action: 'close',
                 title: 'Close',
-                icon: '/img/icon-96x96.png'
+                icon: '/assets/img/icons/favicon-32x32.png'
             }
         ]
     };

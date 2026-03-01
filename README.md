@@ -133,35 +133,54 @@ Personal portfolio website showcasing my work as a **Principal Frontend Engineer
 ```
 kongaraju.github.io/
 ├── 📄 index.html                    # Homepage
-├── 📄 resume.html                   # Professional resume
-├── 📄 privacy-policy.html           # Privacy policy
-├── 📄 404.html                      # Custom error page
-├── 📄 case-study-arkeydock.html    # Docker management case study
-├── 📄 case-study-arkeyjs.html      # Web components case study
-├── 📄 case-study-antkorp.html      # Collaboration platform case study
 ├── 📄 manifest.json                 # PWA manifest
 ├── 📄 service-worker.js             # Service worker for offline support
-├── 📄 pwa-install.js                # PWA installation handler
-├── 📄 performance.js                # Performance optimizations
 ├── 📄 robots.txt                    # Search engine directives
 ├── 📄 sitemap.xml                   # Site structure
 ├── 📄 humans.txt                    # Team info
 ├── 📄 favicon.ico                   # Browser icon
-├── 🍪 cookie-consent.html           # Cookie banner
-├── 🍪 cookie-consent.css            # Cookie styles
-├── 🍪 cookie-consent.js             # Cookie logic
-├── 📁 css/                          # Stylesheets
-│   ├── style.css                    # Main styles
-│   ├── font.css                     # Font definitions
-│   └── fonts/                       # Icon fonts
-├── 📁 js/                           # JavaScript files
-│   ├── script.js                    # Main scripts
-│   └── particles.js                 # Particle effects
-├── 📁 img/                          # Images and icons
-│   ├── favicon-*.png                # Favicon sizes
-│   ├── android-chrome-*.png         # Android icons
-│   ├── apple-touch-icon.png         # iOS icon
-│   └── *.jpg, *.png                 # Project images
+├── 📄 404.html                      # Custom error page
+├── 📄 CNAME                         # Custom domain config
+├── 📄 README.md                     # This file
+├── 📄 CHANGELOG.md                  # Version history
+├── 📁 assets/                       # All static assets
+│   ├── 📁 css/                      # Stylesheets
+│   │   ├── main.css                 # Main styles
+│   │   ├── fonts.css                # Font definitions
+│   │   ├── cookie-consent.css       # Cookie banner styles
+│   │   └── fonts/                   # Icon fonts
+│   ├── 📁 js/                       # JavaScript files
+│   │   ├── main.js                  # Main scripts
+│   │   ├── particles.js             # Particle effects
+│   │   ├── performance.js           # Performance optimizations
+│   │   ├── pwa-install.js           # PWA installation handler
+│   │   └── cookie-consent.js        # Cookie consent logic
+│   └── 📁 img/                      # Images
+│       ├── icons/                   # Favicons and app icons
+│       ├── projects/                # Project screenshots
+│       └── misc/                    # Other images
+├── 📁 pages/                        # HTML pages
+│   ├── resume.html                  # Professional resume
+│   ├── privacy-policy.html          # Privacy policy
+│   └── 📁 case-studies/             # Case study pages
+│       ├── arkeydock.html           # Docker management
+│       ├── arkeyjs.html             # Web components
+│       └── antkorp.html             # Collaboration platform
+├── 📁 components/                   # Reusable components
+│   └── cookie-consent.html          # Cookie consent banner
+├── 📁 docs/                         # Documentation
+│   ├── 📁 guides/                   # Implementation guides
+│   │   ├── WEEK2_IMPLEMENTATION.md
+│   │   ├── WEEK3_IMPLEMENTATION.md
+│   │   ├── WEEK4_IMPLEMENTATION.md
+│   │   ├── PWA_PERFORMANCE_IMPLEMENTATION.md
+│   │   └── ICON_GENERATION_GUIDE.md
+│   ├── FIXES_APPLIED.md
+│   ├── TEST_REPORT.md
+│   ├── QUICK_WINS_IMPLEMENTED.md
+│   ├── PRINT_OPTIMIZATION.md
+│   ├── FAVICON_UPDATE.md
+│   └── FOLDER_STRUCTURE_PLAN.md
 └── 📁 .well-known/                  # Security files
     └── security.txt                 # Security contact info
 ```

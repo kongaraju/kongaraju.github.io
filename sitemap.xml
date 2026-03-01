@@ -14,7 +14,7 @@
     
     <!-- Resume Page -->
     <url>
-        <loc>https://kongaraju.in/resume.html</loc>
+        <loc>https://kongaraju.in/pages/resume.html</loc>
         <lastmod>2026-03-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -54,21 +54,21 @@
     
     <!-- Case Studies -->
     <url>
-        <loc>https://kongaraju.in/case-study-arkeydock.html</loc>
+        <loc>https://kongaraju.in/pages/case-studies/arkeydock.html</loc>
         <lastmod>2026-03-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kongaraju.in/case-study-arkeyjs.html</loc>
+        <loc>https://kongaraju.in/pages/case-studies/arkeyjs.html</loc>
         <lastmod>2026-03-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://kongaraju.in/case-study-antkorp.html</loc>
+        <loc>https://kongaraju.in/pages/case-studies/antkorp.html</loc>
         <lastmod>2026-03-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -76,7 +76,7 @@
     
     <!-- Legal Pages -->
     <url>
-        <loc>https://kongaraju.in/privacy-policy.html</loc>
+        <loc>https://kongaraju.in/pages/privacy-policy.html</loc>
         <lastmod>2026-03-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
