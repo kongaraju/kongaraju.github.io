@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Raju Konga - Resume</title>
+	
+	<!-- Modern fonts from Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	
+	<style>
+		:root {
+			color-scheme: light dark;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		}
+
+		/* System-adaptive theme variables */
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bg-primary: 255 255 255;
+				--bg-secondary: 249 250 251;
+				--bg-tertiary: 243 244 246;
+				--text-primary: 17 24 39;
+				--text-secondary: 75 85 99;
+				--text-tertiary: 107 114 128;
+				--border-color: 229 231 235;
+				--accent-color: 16 185 129;
+			}
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--bg-primary: 15 23 42;
+				--bg-secondary: 30 41 59;
+				--bg-tertiary: 51 65 85;
+				--text-primary: 248 250 252;
+				--text-secondary: 203 213 225;
+				--text-tertiary: 148 163 184;
+				--border-color: 51 65 85;
+				--accent-color: 52 211 153;
+			}
+		}
+
+		body {
+			background-color: rgb(var(--bg-secondary));
+			color: rgb(var(--text-primary));
+			line-height: 1.6;
+			padding: 2rem 1rem;
+		}
+
+		.container {
+			max-width: 850px;
+			margin: 0 auto;
+			background-color: rgb(var(--bg-primary));
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.header {
+			padding: 3rem 3rem 2rem;
+			border-bottom: 2px solid rgb(var(--accent-color));
+		}
+
+		.header h1 {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-bottom: 0.5rem;
+			color: rgb(var(--text-primary));
+		}
+
+		.header .title {
+			font-size: 1.25rem;
+			font-weight: 500;
+			color: rgb(var(--accent-color));
+			margin-bottom: 1.5rem;
+		}
+
+		.contact-info {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			font-size: 0.9rem;
+			color: rgb(var(--text-secondary));
+		}
+
+		.contact-info a {
+			color: rgb(var(--text-secondary));
+			text-decoration: none;
+		}
+
+		.contact-info a:hover {
+			color: rgb(var(--accent-color));
+		}
+
+		.content {
+			padding: 2rem 3rem 3rem;
+		}
+
+		.section {
+			margin-bottom: 2.5rem;
+		}
+
+		.section:last-child {
+			margin-bottom: 0;
+		}
+
+		.section-title {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: rgb(var(--text-primary));
+			margin-bottom: 1.25rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 2px solid rgb(var(--border-color));
+		}
+
+		.experience-item,
+		.education-item {
+			margin-bottom: 1.75rem;
+		}
+
+		.experience-item:last-child,
+		.education-item:last-child {
+			margin-bottom: 0;
+		}
+
+		.item-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-bottom: 0.5rem;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+
+		.item-title {
+			font-size: 1.1rem;
+			font-weight: 600;
+			color: rgb(var(--text-primary));
+		}
+
+		.item-company {
+			font-size: 1rem;
+			font-weight: 500;
+			color: rgb(var(--accent-color));
+		}
+
+		.item-date {
+			font-size: 0.9rem;
+			color: rgb(var(--text-tertiary));
+			white-space: nowrap;
+		}
+
+		.item-description {
+			color: rgb(var(--text-secondary));
+			margin-top: 0.5rem;
+			font-size: 0.95rem;
+		}
+
+		.item-description ul {
+			margin-left: 1.25rem;
+			margin-top: 0.5rem;
+		}
+
+		.item-description li {
+			margin-bottom: 0.4rem;
+		}
+
+		.skills-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 1.5rem;
+		}
+
+		.skill-category {
+			padding: 1rem;
+			background-color: rgb(var(--bg-secondary));
+			border-radius: 6px;
+			border: 1px solid rgb(var(--border-color));
+		}
+
+		.skill-category h3 {
+			font-size: 1rem;
+			font-weight: 600;
+			color: rgb(var(--accent-color));
+			margin-bottom: 0.75rem;
+		}
+
+		.skill-category ul {
+			list-style: none;
+		}
+
+		.skill-category li {
+			font-size: 0.9rem;
+			color: rgb(var(--text-secondary));
+			margin-bottom: 0.4rem;
+			padding-left: 1rem;
+			position: relative;
+		}
+
+		.skill-category li:before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: rgb(var(--accent-color));
+		}
+
+		.summary {
+			font-size: 1rem;
+			color: rgb(var(--text-secondary));
+			line-height: 1.7;
+		}
+
+		@media print {
+			body {
+				background: white;
+				padding: 0;
+			}
+			
+			.container {
+				box-shadow: none;
+				max-width: 100%;
+			}
+			
+			.no-print {
+				display: none;
+			}
+		}
+
+		@media (max-width: 768px) {
+			body {
+				padding: 1rem 0.5rem;
+			}
+
+			.header,
+			.content {
+				padding: 2rem 1.5rem;
+			}
+
+			.header h1 {
+				font-size: 2rem;
+			}
+
+			.item-header {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.skills-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		.print-button {
+			position: fixed;
+			bottom: 2rem;
+			right: 2rem;
+			padding: 0.75rem 1.5rem;
+			background-color: rgb(var(--accent-color));
+			color: rgb(var(--bg-primary));
+			border: none;
+			border-radius: 6px;
+			font-weight: 600;
+			cursor: pointer;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+			transition: opacity 0.2s;
+		}
+
+		.print-button:hover {
+			opacity: 0.9;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<h1>Raju Konga</h1>
+			<div class="title">Principal Frontend Engineer</div>
+			<div class="contact-info">
+				<span>Toronto, ON, Canada</span>
+				<span>📧 <a href="mailto:kongaraju.ca25@gmail.com">kongaraju.ca25@gmail.com</a></span>
+				<!-- <span>📱 +1 647 804 3781</span> -->
+				<span>🌐 <a href="http://kongaraju.in" target="_blank">kongaraju.in</a></span>
+				<span>💼 <a href="https://linkedin.com/in/kongaraju" target="_blank">LinkedIn</a></span>
+				<span>💻 <a href="https://github.com/kongaraju" target="_blank">GitHub</a></span>
+			</div>
+		</header>
+
+		<div class="content">
+			<section class="section">
+				<h2 class="section-title">Professional Summary</h2>
+				<p class="summary">
+					Principal Frontend Engineer with 10+ years of experience designing, scaling, and modernizing large-scale, 
+					high-traffic web platforms. Proven track record of defining frontend technical vision, architecting complex 
+					systems, and acting as a force multiplier across teams. Deep expertise in frontend architecture, performance 
+					optimization, micro-frontends, design systems, and AI-driven development practices. Trusted technical leader 
+					known for mentoring engineers, influencing cross-functional stakeholders, and delivering durable systems with 
+					measurable business impact.
+				</p>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Professional Experience</h2>
+				
+				<div class="experience-item">
+					<div class="item-header">
+						<div>
+							<div class="item-title">Frontend Engineer II</div>
+							<div class="item-company">Amazon</div>
+						</div>
+						<div class="item-date">Aug 2022 - Present</div>
+					</div>
+					<div class="item-description">
+						<ul>
+							<li>Defined frontend architecture and execution strategy for a mission-critical labor planning platform supporting millions of daily transactions, driving a 23% improvement in operational efficiency</li>
+							<li>Architected and rolled out a scalable micro-frontend platform, enabling independent deployments across teams and reducing integration timelines by 30%</li>
+							<li>Led frontend performance optimization initiatives (code splitting, caching, render optimization), reducing page load times by 30% and contributing to a 15% increase in customer satisfaction</li>
+							<li>Acted as frontend technical lead and mentor for a team of engineers, scaling impact through shared patterns, architecture reviews, and ownership boundaries</li>
+							<li>Partnered closely with product, UX, and backend leaders to shape scope, influence roadmaps, and align technical decisions with business outcomes</li>
+							<li>Established and enforced frontend engineering best practices, including testing strategies, CI/CD automation, accessibility (WCAG), and AI-assisted development, resulting in 25% reduction in production defects and 38% improvement in delivery velocity</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="experience-item">
+					<div class="item-header">
+						<div>
+							<div class="item-title">Senior Staff Software Engineer, Frontend</div>
+							<div class="item-company">GE Vernova</div>
+						</div>
+						<div class="item-date">Apr 2014 - Aug 2022</div>
+					</div>
+					<div class="item-description">
+						<ul>
+							<li>Served as senior technical authority for frontend systems across multiple applications and teams, influencing long-term architectural direction</li>
+							<li>Architected and implemented a responsive, reusable design system, improving cross-platform consistency and driving a 20% increase in mobile engagement</li>
+							<li>Led and mentored 10+ engineers, raising the frontend bar through design reviews, technical coaching, and standardized development practices</li>
+							<li>Introduced a component-driven architecture that modularized the codebase and reduced feature development time by 35%</li>
+							<li>Led modernization efforts to migrate legacy frontend systems to modern frameworks, significantly improving scalability, performance, and maintainability</li>
+							<li>Drove UX-led improvements through customer feedback analysis, resulting in a 17% increase in customer satisfaction</li>
+							<li>Collaborated with architects, backend teams, and product leaders to deliver complex, cross-cutting features aligned with platform goals</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Core Expertise</h2>
+				<div class="skills-grid">
+					<div class="skill-category">
+						<h3>Frontend Architecture & Strategy</h3>
+						<ul>
+							<li>Micro-frontends</li>
+							<li>Platform standardization</li>
+							<li>Design systems</li>
+							<li>State management</li>
+							<li>SSR/CSR trade-offs</li>
+						</ul>
+					</div>
+					<div class="skill-category">
+						<h3>Web & UI Technologies</h3>
+						<ul>
+							<li>React</li>
+							<li>Angular</li>
+							<li>TypeScript</li>
+							<li>JavaScript (ES6+)</li>
+							<li>HTML5, CSS3, Tailwind</li>
+						</ul>
+					</div>
+					<div class="skill-category">
+						<h3>Performance & Scale</h3>
+						<ul>
+							<li>Core Web Vitals</li>
+							<li>Bundle optimization</li>
+							<li>Lazy loading</li>
+							<li>Caching strategies</li>
+							<li>SEO</li>
+						</ul>
+					</div>
+					<div class="skill-category">
+						<h3>Quality & Delivery</h3>
+						<ul>
+							<li>Jest, Cypress</li>
+							<li>TDD</li>
+							<li>CI/CD pipelines</li>
+							<li>Automated testing</li>
+						</ul>
+					</div>
+					<div class="skill-category">
+						<h3>Technical Leadership</h3>
+						<ul>
+							<li>Architecture reviews</li>
+							<li>Mentorship</li>
+							<li>Cross-team influence</li>
+							<li>Technical roadmap ownership</li>
+						</ul>
+					</div>
+					<div class="skill-category">
+						<h3>AI-Driven Development</h3>
+						<ul>
+							<li>AI-assisted coding</li>
+							<li>Testing automation</li>
+							<li>Developer productivity tooling</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Architectural & Platform Impact</h2>
+				<div class="item-description">
+					<ul>
+						<li>Defined frontend standards and architectural patterns adopted across multiple teams</li>
+						<li>Led large-scale migrations from legacy UI stacks to modern React-based architectures</li>
+						<li>Balanced performance, maintainability, and delivery speed through pragmatic system design decisions</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Certifications</h2>
+				<div class="skills-grid">
+					<div class="skill-category">
+						<h3>AWS Certifications</h3>
+						<ul>
+							<li>AWS Certified Cloud Practitioner</li>
+							<li>AWS Certified AI Practitioner</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Education</h2>
+				
+				<div class="education-item">
+					<div class="item-header">
+						<div>
+							<div class="item-title">Master of Computer Applications (MCA)</div>
+							<div class="item-company">Acharya Nagarjuna University</div>
+						</div>
+						<div class="item-date">2009 - 2012</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<button class="print-button no-print" onclick="window.print()">📄 Print / Save as PDF</button>
+</body>
+</html>
