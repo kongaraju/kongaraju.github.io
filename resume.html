@@ -3,8 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Raju Konga - Resume</title>
+	<title>Raju Konga - Resume | Principal Frontend Engineer</title>
 	<meta name="description" content="Principal Frontend Engineer with 10+ years of experience in frontend architecture, micro-frontends, and performance optimization.">
+	<meta name="author" content="Raju Konga">
+	
+	<!-- Open Graph / Social Media -->
+	<meta property="og:type" content="profile">
+	<meta property="og:url" content="https://kongaraju.in/resume.html">
+	<meta property="og:title" content="Raju Konga - Resume">
+	<meta property="og:description" content="Principal Frontend Engineer with 10+ years of experience in frontend architecture, micro-frontends, and performance optimization.">
+	
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@kongaraju">
+	<meta name="twitter:title" content="Raju Konga - Resume">
+	
+	<!-- Canonical URL -->
+	<link rel="canonical" href="https://kongaraju.in/resume.html">
+	
+	<!-- DNS Prefetch -->
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 	
 	<!-- Modern fonts from Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +40,26 @@
 			box-sizing: border-box;
 			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 		}
+		
+		/* Focus styles for accessibility */
+		a:focus-visible,
+		button:focus-visible {
+			outline: 3px solid rgb(var(--accent-color));
+			outline-offset: 2px;
+		}
+		
+		/* Screen reader only text */
+		.sr-only {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+			border-width: 0;
+		}
 
 		/* System-adaptive theme variables */
 		@media (prefers-color-scheme: light) {
@@ -30,8 +68,8 @@
 				--bg-secondary: 249 250 251;
 				--bg-tertiary: 243 244 246;
 				--text-primary: 17 24 39;
-				--text-secondary: 75 85 99;
-				--text-tertiary: 107 114 128;
+				--text-secondary: 55 65 81;
+				--text-tertiary: 75 85 99;
 				--border-color: 229 231 235;
 				--accent-color: 16 185 129;
 			}
@@ -289,6 +327,8 @@
 
 		.action-button {
 			padding: 0.75rem 1.5rem;
+			min-width: 44px;
+			min-height: 44px;
 			background-color: rgb(var(--accent-color));
 			color: rgb(var(--bg-primary));
 			border: none;
@@ -300,6 +340,9 @@
 			text-decoration: none;
 			text-align: center;
 			font-size: 0.9rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 
 		.action-button:hover {
@@ -328,9 +371,9 @@
 				<span>Toronto, ON, Canada</span>
 				<span>📧 <a href="mailto:kongaraju.ca25@gmail.com">kongaraju.ca25@gmail.com</a></span>
 				<!-- <span>📱 +1 647 804 3781</span> -->
-				<span>🌐 <a href="http://kongaraju.in" target="_blank">kongaraju.in</a></span>
-				<span>💼 <a href="https://linkedin.com/in/kongaraju" target="_blank">LinkedIn</a></span>
-				<span>💻 <a href="https://github.com/kongaraju" target="_blank">GitHub</a></span>
+				<span>🌐 <a href="https://kongaraju.in" target="_blank" rel="noopener noreferrer">kongaraju.in<span class="sr-only"> (opens in new tab)</span></a></span>
+				<span>💼 <a href="https://linkedin.com/in/kongaraju" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a></span>
+				<span>💻 <a href="https://github.com/kongaraju" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (opens in new tab)</span></a></span>
 			</div>
 		</header>
 
@@ -495,8 +538,47 @@
 	</div>
 
 	<div class="action-buttons no-print">
-		<a href="index.html" class="action-button secondary">← Portfolio</a>
-		<button class="action-button" onclick="window.print()">📄 Print / PDF</button>
+		<a href="index.html" class="action-button secondary" aria-label="Back to portfolio">← Portfolio</a>
+		<button class="action-button" onclick="window.print()" aria-label="Print resume or save as PDF">📄 Print / PDF</button>
 	</div>
+	
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Raju Konga",
+		"jobTitle": "Principal Frontend Engineer",
+		"url": "https://kongaraju.in",
+		"email": "kongaraju.ca25@gmail.com",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Toronto",
+			"addressRegion": "ON",
+			"addressCountry": "CA"
+		},
+		"alumniOf": {
+			"@type": "EducationalOrganization",
+			"name": "Acharya Nagarjuna University"
+		},
+		"worksFor": {
+			"@type": "Organization",
+			"name": "Amazon"
+		},
+		"sameAs": [
+			"https://github.com/kongaraju",
+			"https://linkedin.com/in/kongaraju",
+			"https://twitter.com/kongaraju"
+		],
+		"knowsAbout": [
+			"Frontend Architecture",
+			"Micro-frontends",
+			"React",
+			"TypeScript",
+			"Performance Optimization",
+			"Web Development"
+		]
+	}
+	</script>
 </body>
 </html>

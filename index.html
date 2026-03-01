@@ -1,44 +1,72 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-	<script>
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-		ga('create', 'UA-48535302-1', 'auto');
-		ga('send', 'pageview');
-	</script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Raju Konga - Principal Frontend Engineer</title>
 	<meta name="description" content="Principal Frontend Engineer specializing in frontend architecture, micro-frontends, and performance optimization. Currently at Amazon.">
 	<meta name="author" content="Raju Konga">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-
-	<!-- Tailwind CSS -->
-	<script src="https://cdn.tailwindcss.com"></script>
 	
+	<!-- Open Graph / Social Media -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://kongaraju.in/">
+	<meta property="og:title" content="Raju Konga - Principal Frontend Engineer">
+	<meta property="og:description" content="Principal Frontend Engineer specializing in frontend architecture, micro-frontends, and performance optimization.">
+	<meta property="og:image" content="https://kongaraju.in/img/hero_image.jpg">
+	
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@kongaraju">
+	<meta name="twitter:title" content="Raju Konga - Principal Frontend Engineer">
+	<meta name="twitter:description" content="Principal Frontend Engineer specializing in frontend architecture, micro-frontends, and performance optimization.">
+	
+	<!-- Canonical URL -->
+	<link rel="canonical" href="https://kongaraju.in/">
+	
+	<!-- DNS Prefetch -->
+	<link rel="dns-prefetch" href="https://www.google-analytics.com">
+	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
 	<!-- Modern fonts from Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	
+	<!-- Tailwind CSS -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	
 	<style>
+		/* Skip to main content link */
+		.skip-link {
+			position: absolute;
+			top: -40px;
+			left: 0;
+			background: rgb(var(--accent-color));
+			color: rgb(var(--bg-primary));
+			padding: 8px 16px;
+			text-decoration: none;
+			z-index: 100;
+			border-radius: 0 0 4px 0;
+		}
+		
+		.skip-link:focus {
+			top: 0;
+		}
+		
 		:root {
 			color-scheme: light dark;
 		}
 
 		* {
 			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		}
+		
+		/* Focus styles for accessibility */
+		a:focus-visible,
+		button:focus-visible {
+			outline: 3px solid rgb(var(--accent-color));
+			outline-offset: 2px;
 		}
 
 		/* System-adaptive theme variables */
@@ -48,8 +76,8 @@
 				--bg-secondary: 249 250 251;
 				--bg-tertiary: 243 244 246;
 				--text-primary: 17 24 39;
-				--text-secondary: 75 85 99;
-				--text-tertiary: 107 114 128;
+				--text-secondary: 55 65 81;
+				--text-tertiary: 75 85 99;
 				--border-color: 229 231 235;
 				--accent-color: 16 185 129;
 				--accent-hover: 5 150 105;
@@ -82,11 +110,15 @@
 		/* Mobile menu toggle */
 		.mobile-menu-button {
 			display: none;
+			min-width: 44px;
+			min-height: 44px;
 		}
 
 		@media (max-width: 768px) {
 			.mobile-menu-button {
-				display: block;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				background: none;
 				border: none;
 				color: rgb(var(--text-primary));
@@ -106,6 +138,7 @@
 				padding: 1rem;
 				flex-direction: column;
 				gap: 1rem;
+				z-index: 50;
 			}
 
 			.nav-menu.active {
@@ -115,17 +148,38 @@
 			.nav-menu li {
 				text-align: center;
 			}
+			
+			.nav-menu a {
+				display: block;
+				padding: 0.75rem 1rem;
+				min-height: 44px;
+			}
+		}
+		
+		/* Screen reader only text */
+		.sr-only {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			white-space: nowrap;
+			border-width: 0;
 		}
 	</style>
 </head>
 <body class="antialiased transition-colors duration-300">
+	<a href="#main" class="skip-link">Skip to main content</a>
+	
 	<div class="min-h-screen flex flex-col" style="background-color: rgb(var(--bg-primary))">
 		<header class="sticky top-0 z-20 backdrop-blur-md" style="border-bottom: 1px solid rgb(var(--border-color)); background-color: rgba(var(--bg-primary), 0.9)">
-			<nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6" style="position: relative;">
+			<nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6" style="position: relative;" aria-label="Main navigation">
 				<a href="index.html" class="text-sm font-semibold tracking-tight" style="color: rgb(var(--text-primary))">
 					Raju Konga
 				</a>
-				<button class="mobile-menu-button no-print" onclick="toggleMenu()" aria-label="Toggle menu">
+				<button class="mobile-menu-button no-print" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
 					☰
 				</button>
 				<ul class="nav-menu flex items-center gap-6 text-sm font-medium" style="color: rgb(var(--text-secondary))">
@@ -139,7 +193,7 @@
 			</nav>
 		</header>
 
-		<main id="top" class="flex-1">
+		<main id="main" class="flex-1">
 			<section id="about" class="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
 				<div class="mx-auto flex max-w-5xl flex-col gap-12 lg:flex-row lg:items-center">
 					<div class="flex-1 space-y-6">
@@ -228,10 +282,10 @@
 								Web interface for managing Docker hosts and containers remotely, exposing Docker
 								Remote APIs through a clean, browser‑based dashboard.
 							</p>
-							<a href="http://kongaraju.in/arkeydock/" target="_blank"
+							<a href="http://kongaraju.in/arkeydock/" target="_blank" rel="noopener noreferrer"
 								class="mt-4 text-sm font-semibold hover:opacity-70 transition-opacity"
 								style="color: rgb(var(--accent-color))">
-								View project →
+								View project →<span class="sr-only"> (opens in new tab)</span>
 							</a>
 						</article>
 
@@ -495,15 +549,50 @@
 
 		function toggleMenu() {
 			const menu = document.querySelector('.nav-menu');
+			const button = document.querySelector('.mobile-menu-button');
+			const isExpanded = menu.classList.contains('active');
+			
 			menu.classList.toggle('active');
+			button.setAttribute('aria-expanded', !isExpanded);
 		}
 
 		// Close mobile menu when clicking a link
 		document.querySelectorAll('.nav-menu a').forEach(link => {
 			link.addEventListener('click', () => {
-				document.querySelector('.nav-menu').classList.remove('active');
+				const menu = document.querySelector('.nav-menu');
+				const button = document.querySelector('.mobile-menu-button');
+				menu.classList.remove('active');
+				button.setAttribute('aria-expanded', 'false');
 			});
 		});
+	</script>
+	
+	<!-- Google Analytics - Loaded async at end -->
+	<script async src="https://www.google-analytics.com/analytics.js"></script>
+	<script>
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', 'UA-48535302-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Raju Konga",
+		"jobTitle": "Principal Frontend Engineer",
+		"url": "https://kongaraju.in",
+		"sameAs": [
+			"https://github.com/kongaraju",
+			"https://linkedin.com/in/kongaraju",
+			"https://twitter.com/kongaraju"
+		],
+		"worksFor": {
+			"@type": "Organization",
+			"name": "Amazon"
+		}
+	}
 	</script>
 </body>
 </html>
