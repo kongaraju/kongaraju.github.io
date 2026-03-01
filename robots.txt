@@ -1,5 +1,16 @@
-# www.robotstxt.org/
-# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+# robots.txt for kongaraju.in
+# Allow all search engines to crawl the site
 
 User-agent: *
+Allow: /
 
+# Disallow crawling of specific files
+Disallow: /TEST_REPORT.md
+Disallow: /FIXES_APPLIED.md
+Disallow: /ADDITIONAL_CONSIDERATIONS.md
+
+# Sitemap location
+Sitemap: https://kongaraju.in/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+# Crawl-delay: 1

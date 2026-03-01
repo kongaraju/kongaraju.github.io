@@ -1,0 +1,23 @@
+# Security Contact Information
+# https://securitytxt.org/
+
+Contact: mailto:kongaraju.ca25@gmail.com
+Contact: https://linkedin.com/in/kongaraju
+
+Expires: 2027-03-01T00:00:00.000Z
+
+Preferred-Languages: en
+
+Canonical: https://kongaraju.in/.well-known/security.txt
+
+# Policy
+Policy: https://kongaraju.in/security-policy.html
+
+# Acknowledgments
+Acknowledgments: https://kongaraju.in/security-acknowledgments.html
+
+# Hiring
+Hiring: https://kongaraju.in/#contact
+
+# Please report security vulnerabilities responsibly.
+# We appreciate your efforts to improve the security of our site.

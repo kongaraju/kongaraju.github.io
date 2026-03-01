@@ -1,0 +1,43 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+    Developer: Raju Konga
+    Role: Principal Frontend Engineer
+    Site: https://kongaraju.in
+    Email: kongaraju.ca25@gmail.com
+    Location: Toronto, ON, Canada
+    LinkedIn: https://linkedin.com/in/kongaraju
+    GitHub: https://github.com/kongaraju
+    Twitter: @kongaraju
+
+/* THANKS */
+    To all the open source contributors who make the web better.
+
+/* SITE */
+    Last update: 2026/03/01
+    Standards: HTML5, CSS3, JavaScript ES6+
+    Components: Tailwind CSS, Google Fonts (Inter)
+    Software: VS Code, Git, GitHub
+    Accessibility: WCAG 2.1 Level AA
+    Performance: Optimized for Core Web Vitals
+    
+/* TECH STACK */
+    Frontend: HTML5, CSS3, JavaScript
+    Fonts: Inter (Google Fonts)
+    Analytics: Google Analytics 4
+    Hosting: GitHub Pages / Netlify
+    Version Control: Git
+    
+/* FEATURES */
+    - System-adaptive dark/light theme
+    - Fully responsive design
+    - Keyboard accessible
+    - Screen reader optimized
+    - Print-friendly resume
+    - Progressive enhancement
+    
+/* CONTACT */
+    If you'd like to work together or have questions:
+    Email: kongaraju.ca25@gmail.com
+    LinkedIn: https://linkedin.com/in/kongaraju
